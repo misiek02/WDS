@@ -5,6 +5,13 @@
 #include <QStackedWidget>
 #include <QVBoxLayout>
 
+
+/**
+ * @brief MainWindow::MainWindow Konstruktor klasy MainWindow
+ * @param parent Rodzicielski widget
+ *
+ * Funkcja inicjalizuje glowne okno, ustawia widok 3D i kanvas, oswietlenie czy punkt widzenia.
+ */
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -25,28 +32,27 @@ MainWindow::MainWindow(QWidget *parent)
 
     Qt3DCore::QEntity *rootEntity = new Qt3DCore::QEntity();
 
-    // Set up the 3D model
+    // Ustawienie modelu 3D
     Model3D *model3D = new Model3D(rootEntity);
 
-    // Set up the camera
+    // Ustawienie kamery
     Qt3DRender::QCamera *cameraEntity = view->camera();
     cameraEntity->lens()->setPerspectiveProjection(45.0f, 16.0f/9.0f, 0.1f, 1000.0f);
     cameraEntity->setPosition(QVector3D(0, 0, 1000.0f));
     cameraEntity->setViewCenter(QVector3D(0, 0, 0));
 
-    // Set up camera controls
+    // Ustawienie kontrolera kamery
     Qt3DExtras::QOrbitCameraController *camController = new Qt3DExtras::QOrbitCameraController(rootEntity);
     camController->setCamera(cameraEntity);
 
-    // Set up light
-    // Set up light
+    // Ustawienie oswietlenia
     Qt3DCore::QEntity *lightEntity = new Qt3DCore::QEntity(rootEntity);
     Qt3DRender::QPointLight *light = new Qt3DRender::QPointLight(lightEntity);
     light->setColor("white");
     light->setIntensity(1);
     lightEntity->addComponent(light);
 
-    // Set up transform for light position
+    // Ustawienie transformacji dla pozycji swiatla
     Qt3DCore::QTransform *lightTransform = new Qt3DCore::QTransform();
     lightTransform->setTranslation(QVector3D(10.0f, 10.0f, 10.0f)); // Set light position
     lightEntity->addComponent(lightTransform);
@@ -72,6 +78,11 @@ MainWindow::MainWindow(QWidget *parent)
     // timer->start(1000); // Trigger every 1000 milliseconds (1 second)
 }
 
+/**
+ * @brief MainWindow::~MainWindow Destruktor klasy MainWindow
+ *
+ * Usuwa obiekt UI.
+ */
 MainWindow::~MainWindow()
 {
     delete ui;

@@ -4,7 +4,7 @@
  * @file speedometer.hh
  * @brief Definicja klasy Speedometer
  *
- * Pilik zawiera definicję klasy Speedometer która jest klasą bazową
+ * Pilik zawiera definicje klasy Speedometer ktora jest klasa bazowa
  */
 #include <QWidget>
 #include <QTimer>
@@ -12,19 +12,19 @@
 #include <QLabel>
 
 /**
- * @brief Modeluje pojęcie prędkościomierza
+ * @brief Modeluje pojecie predkosciomierza
  */
 class Speedometer : public QWidget {
     Q_OBJECT
 public:
     /**
-     * @brief Speedometer
-     * @param parent
+     * @brief Konstruktor klasy Speedometer
+     * @param parent wskaznik na obiekt nadrzedny
      */
     explicit Speedometer(QWidget *parent = nullptr);
     /**
-     * @brief setSpeed ustawia prędkość
-     * @param speed parametr prędkości
+     * @brief setSpeed ustawia predkosc
+     * @param speed predkosc do ustawienia
      */
     void setSpeed(int speed);
 
@@ -34,8 +34,8 @@ private slots:
      */
     void updateNeedle();
     /**
-     * @brief sliderValueChanged obsługuje zmienę slider'a
-     * @param value wartość slider'a
+     * @brief obsluguje zmiane wartosci suwaka
+     * @param value wartosc suwaka
      */
     void sliderValueChanged(int value);
 
@@ -46,22 +46,10 @@ protected:
     void paintEvent(QPaintEvent *) override;
 
 private:
-    /**
-     * @brief m_timer -- odświeża dane
-     */
-    QTimer *m_timer;
-    /**
-     * @brief m_speedSlider -- ustawia slider
-     */
-    QSlider *m_speedSlider;
-    /**
-     * @brief m_speed -- przypisuje prędkość do zegara
-     */
-    int m_speed;
-    /**
-     * @brief m_angle -- ustawia wskazówkę
-     */
-    double m_angle;
+    QTimer *m_timer; ///< Timer do odświezania danych.
+    QSlider *m_speedSlider; ///< Suwak do ustawiania predkosci.
+    int m_speed; ///< Aktualna predkosc.
+    double m_angle; ///< Kat wskazowki.
 };
 
 #endif // SPEEDOMETER_HH

@@ -6,23 +6,23 @@
 
 /**
  * @brief Speedometer::Speedometer funkcja inicjujaca predkosciomierz
- * @param parent
+ * @param parent wskaźnik na obiekt nadrzędny
  *
- * Funkcja tworzy nowy slider do sterowania zegarem, linkuje timer aby ustalic czas odswiezania wskazowki.
+ * Funkcja tworzy nowy suwak do sterowania zegarem, laczy timer aby ustalic czas odswiezania wskazowki.
  */
 Speedometer::Speedometer(QWidget *parent) : QWidget(parent), m_angle(0), m_speed(0) {
     m_timer = new QTimer(this);
     connect(m_timer, &QTimer::timeout, this, &Speedometer::updateNeedle);
-    m_timer->start(50); // Update every 50 milliseconds
+    m_timer->start(50); // Aktualizacja co 50 ms
 
-    // Slider setup
+    // Konfiguracja suwaka
     m_speedSlider = new QSlider(Qt::Horizontal, this);
-    m_speedSlider->setRange(0, 240); // Assuming max speed is 240 km/h
+    m_speedSlider->setRange(0, 240); // Zakres predkosci
     m_speedSlider->setFixedWidth(300);
     m_speedSlider->setFixedHeight(30);
     connect(m_speedSlider, &QSlider::valueChanged, this, &Speedometer::sliderValueChanged);
 
-    // Layout setup
+    // Konfiguracja układu
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addWidget(m_speedSlider);
     layout->addStretch();
@@ -34,9 +34,9 @@ Speedometer::Speedometer(QWidget *parent) : QWidget(parent), m_angle(0), m_speed
 
 /**
  * @brief Speedometer::setSpeed ustawia predkosc
- * @param speed parametr predkosci
+ * @param speed parametr predkosc do ustawienia
  *
- * Funkcja pozwalajaca na ustawienie predkosci (wartosci dla zegara).
+ * Funkcja pozwala na ustawienie predkosci, ktora bedzie wskazywana przez predksciomierz
  */
 void Speedometer::setSpeed(int speed) {
     m_speed = speed;
@@ -58,7 +58,7 @@ void Speedometer::paintEvent(QPaintEvent *) {
     painter.setViewport((width() - side) / 2, (height() - side) / 2, side, side);
     painter.setWindow(-50, -50, 100, 100);
 
-    // Draw the speedometer gauge
+    // Rysowanie tarczy predkosciomierza
     QLinearGradient gradient(80, -40, 0, 40);
     gradient.setColorAt(0, QColor(170, 170, 170)); // Początkowy kolor gradientu
     gradient.setColorAt(1, QColor(100, 100, 100)); // Końcowy kolor gradientu
@@ -69,7 +69,7 @@ void Speedometer::paintEvent(QPaintEvent *) {
     painter.setBrush(Qt::transparent);
     painter.drawEllipse(-40, -40, 80, 80);
 
-    // Draw the numbers background
+    // Rysowanie liczb w tle
     QFont font2 = painter.font();
     font2.setPointSize(4);
     font2.setBold(true);
@@ -82,7 +82,7 @@ void Speedometer::paintEvent(QPaintEvent *) {
         painter.drawText(-4, 1, QString::number(i));
         painter.restore();
     }
-    // Draw the numbers foreground
+    // Rysowanie liczb na wierzchu
     QFont font = painter.font();
     font.setPointSize(4);
     font.setBold(true);
@@ -97,7 +97,7 @@ void Speedometer::paintEvent(QPaintEvent *) {
     }
 
 
-    // Draw the needle
+    // Rysowanie wskazowki
     painter.save();
     painter.rotate(m_angle);
     QPolygon needle;
@@ -109,9 +109,9 @@ void Speedometer::paintEvent(QPaintEvent *) {
 }
 
 /**
- * @brief Speedometer::updateNeedle aktualizuje wskazowke
+ * @brief Speedometer::updateNeedle aktualizuje pozycje wskazowki
  *
- * Funkcja aktualizuje wskazowke, obicza jej polozenie. Wyznacza maksymalne wychylenie.
+ * Funkcja oblicza nowe polozenie wskazowki na podstawie predkosci i aktualizuje ja.
  */
 void Speedometer::updateNeedle() {
     m_angle = static_cast<double>(m_speed) / 240 * 260 - 130;
@@ -120,7 +120,7 @@ void Speedometer::updateNeedle() {
 
 /**
  * @brief Speedometer::sliderValueChanged przekazuje wartosc z suwaka
- * @param value wartosc zadana suwaka
+ * @param value wartosc zadana na suwaku
  *
  * Funkcja przekazuje wartosc do funkcji setSpeed aby ustawic za pomoca suwaka odpowiednia predkosc,
  * ktora ma zostac wskazana na cyferblacie.
