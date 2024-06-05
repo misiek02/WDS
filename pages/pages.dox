@@ -1,0 +1,21 @@
+/*!
+\mainpage Cat control -- program do sterowania kotem
+
+\authors Michał Suski \n Szymon Wesołowski
+
+\date x
+\version 0.2
+
+
+Aplikacja jest napisana do sprawdzania stanu podłączonego robota, 
+oraz do przesyłania do niego informacji.
+
+\section Połączenie 
+Aplikacja łączy się za pomocą WiFi (TCP/IP), tworząc serwer w sieci lokalnej.
+
+\section Funkcje
+Program odczytuje prędkość pojazdu, pozwala na sprawdzenie jego przyśpieszenia, 
+czy kontroli przeszkód.
+...
+*/
+
