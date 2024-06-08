@@ -6,7 +6,8 @@ Model3D::Model3D(Qt3DCore::QEntity *parent)
 {
     // Load your 3D model file (e.g., "your_model.obj")
     Qt3DRender::QMesh *mesh = new Qt3DRender::QMesh();
-    mesh->setSource(QUrl(QStringLiteral("file:///C:/Users/szych/OneDrive/Dokumenty/qt_projekts/nowe3Dtesciki/robot.obj"))); // Adjust the path as needed
+    mesh->setSource(QUrl(QStringLiteral("file:///C:/Users/ADMIN/Documents/qt_projekts/WSD-main/robot.obj"))); // Adjust the path as needed
+    //C:\Users\ADMIN\Documents\qt_projekts\WSD-main
 
     // Create a material for your model
     Qt3DExtras::QPhongMaterial *material = new Qt3DExtras::QPhongMaterial();

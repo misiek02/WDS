@@ -5,24 +5,22 @@
 #include <QLabel>
 
 /**
- * @brief Speedometer::Speedometer funkcja inicjujaca predkosciomierz
- * @param parent wskaźnik na obiekt nadrzędny
- *
- * Funkcja tworzy nowy suwak do sterowania zegarem, laczy timer aby ustalic czas odswiezania wskazowki.
+ * @brief Speedometer::Speedometer Setup function
+ * @param parent
  */
 Speedometer::Speedometer(QWidget *parent) : QWidget(parent), m_angle(0), m_speed(0) {
     m_timer = new QTimer(this);
     connect(m_timer, &QTimer::timeout, this, &Speedometer::updateNeedle);
-    m_timer->start(50); // Aktualizacja co 50 ms
+    m_timer->start(50); // Update every 100 milliseconds
 
-    // Konfiguracja suwaka
+    // Slider setup
     m_speedSlider = new QSlider(Qt::Horizontal, this);
-    m_speedSlider->setRange(0, 240); // Zakres predkosci
+    m_speedSlider->setRange(0, 240); // Assuming max speed is 240 km/h
     m_speedSlider->setFixedWidth(300);
     m_speedSlider->setFixedHeight(30);
     connect(m_speedSlider, &QSlider::valueChanged, this, &Speedometer::sliderValueChanged);
 
-    // Konfiguracja układu
+    // Layout setup
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addWidget(m_speedSlider);
     layout->addStretch();
@@ -33,10 +31,8 @@ Speedometer::Speedometer(QWidget *parent) : QWidget(parent), m_angle(0), m_speed
 }
 
 /**
- * @brief Speedometer::setSpeed ustawia predkosc
- * @param speed parametr predkosc do ustawienia
- *
- * Funkcja pozwala na ustawienie predkosci, ktora bedzie wskazywana przez predksciomierz
+ * @brief Speedometer::setSpeed
+ * @param speed
  */
 void Speedometer::setSpeed(int speed) {
     m_speed = speed;
@@ -44,11 +40,7 @@ void Speedometer::setSpeed(int speed) {
 }
 
 /**
- * @brief Speedometer::paintEvent rysowanie tarczy
- *
- * Funkcja tworzaca przestrzen do rysowania tarczy, ustawia orientacje rysunku i jego rozmiar.
- * Rozmieszcza w odpowiednich miejscach wartosci na cyferblacie oraz rysuje wskazowke, ktora
- * pokazuje zadana/odczytana z robota predkosc.
+ * @brief Speedometer::paintEvent
  */
 void Speedometer::paintEvent(QPaintEvent *) {
     QPainter painter(this);
@@ -58,7 +50,7 @@ void Speedometer::paintEvent(QPaintEvent *) {
     painter.setViewport((width() - side) / 2, (height() - side) / 2, side, side);
     painter.setWindow(-50, -50, 100, 100);
 
-    // Rysowanie tarczy predkosciomierza
+    // Draw the speedometer gauge
     QLinearGradient gradient(80, -40, 0, 40);
     gradient.setColorAt(0, QColor(170, 170, 170)); // Początkowy kolor gradientu
     gradient.setColorAt(1, QColor(100, 100, 100)); // Końcowy kolor gradientu
@@ -69,7 +61,7 @@ void Speedometer::paintEvent(QPaintEvent *) {
     painter.setBrush(Qt::transparent);
     painter.drawEllipse(-40, -40, 80, 80);
 
-    // Rysowanie liczb w tle
+    // Draw the numbers background
     QFont font2 = painter.font();
     font2.setPointSize(4);
     font2.setBold(true);
@@ -82,7 +74,7 @@ void Speedometer::paintEvent(QPaintEvent *) {
         painter.drawText(-4, 1, QString::number(i));
         painter.restore();
     }
-    // Rysowanie liczb na wierzchu
+    // Draw the numbers foreground
     QFont font = painter.font();
     font.setPointSize(4);
     font.setBold(true);
@@ -97,7 +89,7 @@ void Speedometer::paintEvent(QPaintEvent *) {
     }
 
 
-    // Rysowanie wskazowki
+    // Draw the needle
     painter.save();
     painter.rotate(m_angle);
     QPolygon needle;
@@ -109,9 +101,7 @@ void Speedometer::paintEvent(QPaintEvent *) {
 }
 
 /**
- * @brief Speedometer::updateNeedle aktualizuje pozycje wskazowki
- *
- * Funkcja oblicza nowe polozenie wskazowki na podstawie predkosci i aktualizuje ja.
+ * @brief Speedometer::updateNeedle
  */
 void Speedometer::updateNeedle() {
     m_angle = static_cast<double>(m_speed) / 240 * 260 - 130;
@@ -119,11 +109,8 @@ void Speedometer::updateNeedle() {
 }
 
 /**
- * @brief Speedometer::sliderValueChanged przekazuje wartosc z suwaka
- * @param value wartosc zadana na suwaku
- *
- * Funkcja przekazuje wartosc do funkcji setSpeed aby ustawic za pomoca suwaka odpowiednia predkosc,
- * ktora ma zostac wskazana na cyferblacie.
+ * @brief Speedometer::sliderValueChanged
+ * @param value
  */
 void Speedometer::sliderValueChanged(int value) {
     setSpeed(value);

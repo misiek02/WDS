@@ -38,10 +38,32 @@ void DistanceSensors::setTof2Value(int value)
     ui->tof2_lcd->display(value);
 }
 
-void DistanceSensors::setMotor1Value(int value)
+void DistanceSensors::setXValue(float value)
 {
-   // QString mes = QString::number(value);
-    ui->encoder1_lcd->display(value);
+    QString mes = QString::number(value, 'f', 2);
+    ui->x_val->display(mes);
 }
+
+void DistanceSensors::setYValue(float value)
+{
+    QString mes = QString::number(value, 'f', 2);
+    ui->y_val->display(mes);
+}
+
+void DistanceSensors::setAngleValue(float value)
+{
+    QString mes = QString::number(value, 'f', 2);
+    ui->angle_val->display(mes);
+}
+
+// void DistanceSensors::sendCoordinates(float x, float y, TcpServ *t)
+// {
+//     float x = ui->x_val->value();
+//     float y = ui->y_val->value();
+
+//     QByteArray data = QString("X:%1 Y:%2").arg(x).arg(y).toUtf8();
+//     t->broadcastData(data);
+// }
+
 
 

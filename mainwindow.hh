@@ -8,51 +8,47 @@
 #include <QtNetwork/QTcpSocket>
 #include <QList>
 #include <QByteArray>
-#include <QTranslator>
 #include <QString>
-#include <QActionGroup>
-#include <QDir>
 #include <QMessageBox>
 #include <QDebug>
 #include "canvas.hh"
+#include "accelerationchart.hh"
 
 
+/**
+ * @file mainwindow.hh
+ * @brief Definition of the MainWindow class
+ *
+ * This file contains the class definition for the main window of the application.
+ */
 
 namespace Ui {
+
 class MainWindow;
 }
 
+/**
+ * @brief The MainWindow class represents the main window of the application
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    /**
+     * @brief Constructor for MainWindow class
+     * @param parent Pointer to parent widget, default is nullptr
+     */
     explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-    //virtual void changeEvent(QEvent *event) override;
-    //void LanguageSwitch();
 
-// protected:
-//     // this event is called, when a new translator is loaded or the system language is changed
-//     void changeEvent(QEvent*);
+    /**
+     * @brief Destructor for MainWindow class
+     */
 
-// protected slots:
-//     // this slot is called by the language menu actions
-//     void slotLanguageChanged(QAction* action);
+
 
 private:
-    //      //loads a language by the given language shortcur (e.g. de, en)
-    // void loadLanguage(const QString& rLanguage);
-
-    // // creates the language menu dynamically from the content of m_langPath
-    // void createLanguageMenu(void);
-
-    Ui::MainWindow *ui; // ui definition from designer
-    QTranslator m_translator; // contains the translations for this application
-    QTranslator m_translatorQt; // contains the translations for qt
-    QString m_currLang; // contains the currently loaded language
-    QString m_langPath; // Path of language files. This is always fixed to /languages.
-    //int lang_ID;
+    Ui::MainWindow *ui;
 
 };
 

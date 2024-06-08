@@ -7,6 +7,8 @@
 #include "speedometer.hh"
 #include "tcpserv.hh"
 #include "model3d.hh"
+#include <QHBoxLayout>
+#include <QVBoxLayout>
 
 
 class Canvas : public QWidget

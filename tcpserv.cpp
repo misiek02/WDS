@@ -1,53 +1,63 @@
 #include "tcpserv.hh"
+#include <QVBoxLayout>
+#include <QMessageBox>
+#include <QDebug>
 
 TcpServ::TcpServ(QWidget *parent)
-    : QWidget{parent}
+    : QWidget{parent}, server(new QTcpServer(this))
 {
-    server = new QTcpServer();
+    QVBoxLayout *layout = new QVBoxLayout(this);
 
+    // xEdit = new QLineEdit(this);
+    // xEdit->setPlaceholderText("Enter X value");
+    // yEdit = new QLineEdit(this);
+    // yEdit->setPlaceholderText("Enter Y value");
 
-    if(server->listen(QHostAddress::Any, 8080)){
+    // sendButton = new QPushButton("Send Coordinates", this);
 
-        connect(server, SIGNAL(newConnection()),this,SLOT(newConnection()));
-        QMessageBox::information(this,"info","Server started");
+    // layout->addWidget(xEdit);
+    // layout->addWidget(yEdit);
+    // layout->addWidget(sendButton);
+
+    if (server->listen(QHostAddress::Any, 8080)) {
+        connect(server, &QTcpServer::newConnection, this, &TcpServ::newConnection);
+        QMessageBox::information(this, "Info", "Server started");
+    } else {
+        QMessageBox::information(this, "Info", "Server start fail");
     }
 
-    else{
-        QMessageBox::information(this,"info","Server start fail");
-    }
-
-
+  //  connect(sendButton, &QPushButton::clicked, this, &TcpServ::sendData);
 }
 
 void TcpServ::Read_Data_From_Socket() {
     QTcpSocket *s = qobject_cast<QTcpSocket*>(sender());
     QByteArray msg = s->readAll();
-
-    //qDebug() << msg;
+    qDebug() << "Received data:" << msg;
 
     QTextStream stream(&msg);
     QVector<float> dataVector;
 
     while (!stream.atEnd()) {
-        QString line = stream.readLine().trimmed(); // Trim leading and trailing whitespaces
-
-        if (line.isEmpty() || line == "\r\n") // Skip empty lines or lines containing only "\r\n"
+        QString line = stream.readLine().trimmed();
+        if (line.isEmpty() || line == "\r\n")
             continue;
 
         QStringList values = line.split(" ");
-
-        if (values.size() < 6) // If less than 6 values in a line, skip it
+        if (values.size() < 8)
             continue;
 
         QVector<float> lineData;
         for (const QString& value : values) {
             bool conversionOK;
             float floatValue = value.toFloat(&conversionOK);
-            if (conversionOK)
-                lineData.append(floatValue);
+            if (!conversionOK) {
+                qDebug() << "Failed to convert value to float:" << value;
+                break;
+            }
+            lineData.append(floatValue);
         }
 
-        if (lineData.size() == 6)
+        if (lineData.size() == 8)
             dataVector.append(lineData);
     }
 
@@ -55,24 +65,52 @@ void TcpServ::Read_Data_From_Socket() {
         emit valueSharpChanged(dataVector[2]);
         emit valueTof1Changed(dataVector[3]);
         emit valueTof2Changed(dataVector[4]);
-        emit valueMotor1Changed(dataVector[5]);
+        emit valueXChanged(dataVector[5]);
+        emit valueYChanged(dataVector[6]);
+        emit valueAngleChanged(dataVector[7]);
     }
 }
 
-
-
-void TcpServ::newConnection()
-{
-    while(server->hasPendingConnections()){
+void TcpServ::newConnection() {
+    while (server->hasPendingConnections()) {
         Add_New_Client_Connection(server->nextPendingConnection());
     }
 }
 
-void TcpServ::Add_New_Client_Connection(QTcpSocket *s)
-{
-    Client_Connection_List.append(s);
-    connect(s, SIGNAL(readyRead()), this, SLOT(Read_Data_From_Socket()));
-    QString Client = "Client" + QString::number(s->socketDescriptor()) + " Connected.";
+void TcpServ::Add_New_Client_Connection(QTcpSocket *s) {
+    if (!s) {
+        qDebug() << "Add_New_Client_Connection: Invalid socket";
+        return;
+    }
 
+    Client_Connection_List.append(s);
+    connect(s, &QTcpSocket::readyRead, this, &TcpServ::Read_Data_From_Socket);
+
+   // QString Client = "Client " + QString::number(s->socketDescriptor()) + " Connected.";
+    //qDebug() << Client;
 }
+
+void TcpServ::sendDataToSocket(const QByteArray &data) {
+
+    foreach(QTcpSocket *socket, Client_Connection_List){
+        socket->write(data);
+        qDebug() << data << "\n";
+
+    }
+}
+
+void TcpServ::sendData() {
+    bool xOk, yOk;
+    float x = xEdit->text().toFloat(&xOk);
+    float y = yEdit->text().toFloat(&yOk);
+
+    if (xOk && yOk) {
+        QByteArray data = QString("%1 %2 \n").arg(x).arg(y).toUtf8();
+        sendDataToSocket(data);
+    } else {
+        QMessageBox::warning(this, "Input Error", "Please enter valid float values for X and Y.");
+    }
+}
+
+
 

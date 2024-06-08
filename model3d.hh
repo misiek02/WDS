@@ -14,10 +14,24 @@
 #include <Qt3DExtras/QPhongMaterial>
 
 
+/**
+ * @file model3d.hh
+ * @brief Definition of the Model3D class
+ *
+ * This file contains the class definition.
+ */
+
+/**
+ * @brief The Model3D class represents a 3D model in a Qt3D scene
+ */
 class Model3D : public Qt3DCore::QEntity
 {
     Q_OBJECT
 public:
+    /**
+     * @brief Constructor for Model3D class
+     * @param parent Pointer to parent entity, default is nullptr
+     */
     explicit Model3D(Qt3DCore::QEntity *parent = nullptr);
 };
 
