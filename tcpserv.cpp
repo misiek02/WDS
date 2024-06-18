@@ -43,7 +43,7 @@ void TcpServ::Read_Data_From_Socket() {
             continue;
 
         QStringList values = line.split(" ");
-        if (values.size() < 8)
+        if (values.size() < 9)
             continue;
 
         QVector<float> lineData;
@@ -57,17 +57,21 @@ void TcpServ::Read_Data_From_Socket() {
             lineData.append(floatValue);
         }
 
-        if (lineData.size() == 8)
+        if (lineData.size() == 9)
             dataVector.append(lineData);
     }
 
     if (!dataVector.isEmpty()) {
+        emit accelerationXChanged(dataVector[0]);
+        emit accelerationYChanged(dataVector[1]);
         emit valueSharpChanged(dataVector[2]);
         emit valueTof1Changed(dataVector[3]);
         emit valueTof2Changed(dataVector[4]);
         emit valueXChanged(dataVector[5]);
         emit valueYChanged(dataVector[6]);
         emit valueAngleChanged(dataVector[7]);
+        emit valueSpeedChanged(dataVector[8]);
+
     }
 }
 
@@ -113,4 +117,20 @@ void TcpServ::sendData() {
 }
 
 
+bool TcpServ::isActive() const
+{
+    return active;
+}
 
+void TcpServ::activateServer()
+{
+    active = true;
+
+}
+
+
+void TcpServ::deactivateServer()
+{
+    active = false;
+
+}

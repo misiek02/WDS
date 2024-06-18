@@ -1,0 +1,34 @@
+\doxysection{speedometer.\+hh}
+\hypertarget{speedometer_8hh_source}{}\label{speedometer_8hh_source}\mbox{\hyperlink{speedometer_8hh}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ SPEEDOMETER\_HH}}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00002}00002\ \textcolor{preprocessor}{\#define\ SPEEDOMETER\_HH}}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <QSlider>}}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00020}\mbox{\hyperlink{class_speedometer}{00020}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_speedometer}{Speedometer}}\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00021}00021\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00022}00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_speedometer_a6db0cf4fe610a00650bc2e300e03f8d9}{Speedometer}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_speedometer_ab779eed61253fcef2c02b986ef3a69a5}{setSpeed}}(\textcolor{keywordtype}{int}\ speed);}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00030}00030\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_speedometer_acfbdf0dfa04288e252d6d14fbc3dc10b}{updateNeedle}}();}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_speedometer_a6a994fb973fe6a5013d51ed090041a7a}{sliderValueChanged}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00041}00041\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_speedometer_a51d6b4ac7c6980e919f8dc6f96628934}{paintEvent}}(QPaintEvent\ *)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00047}00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00048}\mbox{\hyperlink{class_speedometer_a0f4c592399ad08cc9c956bdd041ca1a4}{00048}}\ \ \ \ \ QTimer\ *\mbox{\hyperlink{class_speedometer_a0f4c592399ad08cc9c956bdd041ca1a4}{m\_timer}};}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00049}\mbox{\hyperlink{class_speedometer_a9197c31e8610804e1b8f46ca1219f613}{00049}}\ \ \ \ \ QSlider\ *\mbox{\hyperlink{class_speedometer_a9197c31e8610804e1b8f46ca1219f613}{m\_speedSlider}};}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00050}\mbox{\hyperlink{class_speedometer_aa8840e573678c79b40276a3f4c3d6aa0}{00050}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_speedometer_aa8840e573678c79b40276a3f4c3d6aa0}{m\_speed}};}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00051}\mbox{\hyperlink{class_speedometer_a33c15df2ce68ab674431019e6cb89690}{00051}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_speedometer_a33c15df2ce68ab674431019e6cb89690}{m\_angle}};}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00052}00052\ \};}
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8hh_source_l00054}00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SPEEDOMETER\_HH}}
+
+\end{DoxyCode}

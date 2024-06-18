@@ -1,0 +1,9 @@
+<map id="Speedometer::Speedometer" name="Speedometer::Speedometer">
+<area shape="rect" id="Node000001" title="Speedometer::Speedometer Setup function." alt="" coords="5,43,189,69"/>
+<area shape="rect" id="Node000002" href="$class_speedometer.html#a6a994fb973fe6a5013d51ed090041a7a" title="sliderValueChanged handles the slider&#39;s value change" alt="" coords="244,5,415,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,42,229,37,229,42,189,47"/>
+<area shape="rect" id="Node000004" href="$class_speedometer.html#acfbdf0dfa04288e252d6d14fbc3dc10b" title="updateNeedle refreshes the position of the clock&#39;s needle" alt="" coords="237,72,422,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="189,65,221,69,221,74,189,70"/>
+<area shape="rect" id="Node000003" href="$class_speedometer.html#ab779eed61253fcef2c02b986ef3a69a5" title="setSpeed sets the speed" alt="" coords="470,13,631,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="415,24,454,24,454,29,415,29"/>
+</map>

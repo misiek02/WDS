@@ -1,0 +1,9 @@
+<map id="Gyroscope" name="Gyroscope">
+<area shape="rect" id="Node000001" title=" " alt="" coords="34,171,118,197"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,78,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,120,74,169,69,171,50,122"/>
+<area shape="rect" id="Node000003" href="$class_ui_1_1_gyroscope.html" title=" " alt="" coords="101,80,206,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,120,89,172,85,168,131,117"/>
+<area shape="rect" id="Node000004" href="$class_ui___gyroscope.html" title=" " alt="" coords="102,5,205,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="156,48,156,80,151,80,151,48"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="TcpServ::valueTof2Changed" name="TcpServ::valueTof2Changed">
+<area shape="rect" id="Node000001" title="valueTof2Changed informs about new data arrival for sensor ToF2" alt="" coords="792,13,971,40"/>
+<area shape="rect" id="Node000002" href="$class_tcp_serv.html#abddf59a0ce63d1ca5476a9286463d510" title="Slot to read data from the socket." alt="" coords="604,5,744,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="776,29,744,29,744,24,776,24"/>
+<area shape="rect" id="Node000003" href="$class_tcp_serv.html#aff7427f512405098b707b7cb88b716f6" title="Slot to add a new client connection." alt="" coords="386,5,556,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="589,29,557,29,557,24,589,24"/>
+<area shape="rect" id="Node000004" href="$class_tcp_serv.html#ab25bc90e02938a748426da4439d3a084" title="Slot to handle new incoming connections." alt="" coords="175,13,338,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="370,29,338,29,338,24,370,24"/>
+<area shape="rect" id="Node000005" href="$class_tcp_serv.html#a39262c57201db3d33fd8b83d13d93f60" title="Constructor for TcpServ class." alt="" coords="5,13,127,40"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="159,29,127,29,127,24,159,24"/>
+</map>

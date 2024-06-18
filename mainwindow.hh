@@ -44,8 +44,7 @@ public:
     /**
      * @brief Destructor for MainWindow class
      */
-
-
+    ~MainWindow();
 
 private:
     Ui::MainWindow *ui;

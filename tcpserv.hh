@@ -25,6 +25,21 @@ class TcpServ : public QWidget {
     Q_OBJECT
 
 public:
+
+    /**
+     * @brief Checks if server is active
+     */
+    bool isActive() const;
+
+    /**
+     * @brief Starts the server
+     */
+    void activateServer();
+
+    /**
+     * @brief Stops the server
+     */
+    void deactivateServer();
     /**
      * @brief Constructor for TcpServ class
      * @param parent Pointer to parent widget, default is nullptr
@@ -63,6 +78,23 @@ signals:
      */
     void valueAngleChanged(float value);
 
+    /**
+     * @brief accelerationXChanged informs about new acceleration data in X axis
+     * @param value New y axis acceleration - float
+     */
+    void accelerationXChanged(float value);
+
+    /**
+     * @brief accelerationXChanged informs about new acceleration data in X axis
+     * @param value New y axis acceleration - float
+     */
+    void accelerationYChanged(float value);
+
+    /**
+     * @brief ValueSpeedChanged informs about new speed data data
+     * @param value New speed data - float
+     */
+    void valueSpeedChanged(float value);
 private slots:
     /**
      * @brief Slot to handle new incoming connections
@@ -87,12 +119,14 @@ private slots:
      */
     void sendDataToSocket(const QByteArray &data);
 
+
 private:
     QTcpServer *server;                        ///< TCP server instance
     QLineEdit *xEdit;                          ///< Line edit for X coordinate input
     QLineEdit *yEdit;                          ///< Line edit for Y coordinate input
     QPushButton *sendButton;                   ///< Button to send data
     QVector<QTcpSocket*> Client_Connection_List; ///< List of client connections
+    bool active; // Server active status
 };
 
 #endif // TCPSERV_HH

@@ -37,6 +37,13 @@ private slots:
      * @param value slider's value
      */
     void sliderValueChanged(int value);
+public slots:
+    /**
+     * @brief Sets the speed
+     * @param value the speed data from signal
+     */
+    void setSpeedValue(float value);
+
 
 protected:
     /**

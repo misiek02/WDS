@@ -1,0 +1,20 @@
+<map id="speedometer.cpp" name="speedometer.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="322,5,444,32"/>
+<area shape="rect" id="Node000002" href="$speedometer_8hh.html" title="Definition of the Speedometer class." alt="" coords="158,80,272,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="355,35,259,76,257,71,353,30"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="278,155,341,181"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="373,34,354,55,337,81,325,111,317,140,312,139,320,109,332,79,350,52,369,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="347,80,419,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="386,33,386,64,380,64,380,33"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="444,80,522,107"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="402,30,455,68,451,73,399,35"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="546,80,649,107"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="421,30,547,72,545,77,419,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,78,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="186,110,87,151,85,146,184,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="102,155,165,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="202,109,160,146,157,142,199,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="189,155,254,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="219,107,222,139,216,139,213,107"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="233,105,283,143,279,147,230,109"/>
+</map>

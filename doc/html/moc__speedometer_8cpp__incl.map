@@ -1,0 +1,23 @@
+<map id="moc_speedometer.cpp" name="moc_speedometer.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="514,5,668,32"/>
+<area shape="rect" id="Node000002" href="$speedometer_8hh.html" title="Definition of the Speedometer class." alt="" coords="102,80,253,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="519,35,265,79,265,74,518,30"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="277,80,412,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="549,35,403,78,401,73,547,30"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="436,80,575,107"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="578,35,533,72,530,68,574,31"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="599,80,754,107"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="607,31,652,68,648,72,604,35"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="778,80,846,107"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="630,30,764,74,762,79,629,35"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="870,80,1029,107"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="654,30,872,74,871,79,653,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,78,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="155,110,80,149,77,145,153,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="102,155,165,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="172,109,151,143,147,140,168,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="189,155,254,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="187,106,208,140,204,143,183,109"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="278,155,341,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="202,105,275,145,272,149,199,110"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="mainwindow.hh" name="mainwindow.hh">
+<area shape="rect" id="Node000001" title="Definition of the MainWindow class." alt="" coords="108,5,217,32"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title=" " alt="" coords="5,80,80,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,43,65,82,62,77,127,38"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title=" " alt="" coords="104,80,221,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,48,165,80,160,80,160,48"/>
+<area shape="rect" id="Node000004" href="$moc__mainwindow_8cpp.html" title=" " alt="" coords="244,80,393,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="204,36,292,77,290,82,202,41"/>
+</map>

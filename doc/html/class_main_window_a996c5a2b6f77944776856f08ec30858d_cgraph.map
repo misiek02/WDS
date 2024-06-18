@@ -1,0 +1,9 @@
+<map id="MainWindow::MainWindow" name="MainWindow::MainWindow">
+<area shape="rect" id="Node000001" title="Constructor for MainWindow class." alt="" coords="5,43,183,69"/>
+<area shape="rect" id="Node000002" href="$class_acceleration_chart.html#a6311ba5c6074bf3f06a98e4ea9912419" title=" " alt="" coords="248,5,380,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,42,232,35,233,40,183,47"/>
+<area shape="rect" id="Node000003" href="$class_ui___main_window.html#acf4a0872c4c77d8f43a2ec66ed849b58" title=" " alt="" coords="231,72,397,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,65,215,70,215,75,183,70"/>
+<area shape="rect" id="Node000004" href="$class_ui___main_window.html#a097dd160c3534a204904cb374412c618" title=" " alt="" coords="445,72,640,99"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="397,83,429,83,429,88,397,88"/>
+</map>

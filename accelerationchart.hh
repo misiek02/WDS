@@ -18,6 +18,19 @@ public:
 
 private slots:
     void updateData();
+public slots:
+    /**
+     * @brief Sets the acceleration in X axis
+     * @param value acceleration in X axis
+     */
+    void setXValue(float value);
+
+    /**
+     * @brief Sets the acceleration in Y axis
+     * @param value acceleration in Y axis
+     */
+    void setYValue(float value);
+
 
 private:
     QChart *chart;

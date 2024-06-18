@@ -1,0 +1,442 @@
+\doxysection{Tcp\+Serv Class Reference}
+\hypertarget{class_tcp_serv}{}\label{class_tcp_serv}\index{TcpServ@{TcpServ}}
+
+
+Responsible for creating a server robot connects to.  
+
+
+
+
+{\ttfamily \#include $<$tcpserv.\+hh$>$}
+
+
+
+Inheritance diagram for Tcp\+Serv\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_tcp_serv__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tcp\+Serv\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{class_tcp_serv__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tcp_serv_a57f34f9900ec0f0e7797d65d5358034c}{value\+Sharp\+Changed}} (int value)
+\begin{DoxyCompactList}\small\item\em value\+Sharp\+Changed informs about new data arrival \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_serv_a2dbf7bf5bc03836a4271ccd00231eb25}{value\+Tof1\+Changed}} (int value)
+\begin{DoxyCompactList}\small\item\em value\+Tof1\+Changed informs about new data arrival for sensor To\+F1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_serv_a6b8cb2ec1dc15dd29a20e38a8e8ad267}{value\+Tof2\+Changed}} (int value)
+\begin{DoxyCompactList}\small\item\em value\+Tof2\+Changed informs about new data arrival for sensor To\+F2 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_serv_a94bebed7bda5e59849abe2c620c569d9}{value\+XChanged}} (float value)
+\begin{DoxyCompactList}\small\item\em value\+XChanged informs about new X coordinate data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_serv_a2d04177f1875702f7dfd1477dee5812b}{value\+YChanged}} (float value)
+\begin{DoxyCompactList}\small\item\em value\+YChanged informs about new Y coordinate data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_serv_a752846b741cf491778b3e72e0c92b8b3}{value\+Angle\+Changed}} (float value)
+\begin{DoxyCompactList}\small\item\em value\+Angle\+Changed informs about new angle data \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tcp_serv_a39262c57201db3d33fd8b83d13d93f60}{Tcp\+Serv}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_tcp_serv}{Tcp\+Serv} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tcp_serv_ab25bc90e02938a748426da4439d3a084}{new\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Slot to handle new incoming connections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_serv_abddf59a0ce63d1ca5476a9286463d510}{Read\+\_\+\+Data\+\_\+\+From\+\_\+\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em Slot to read data from the socket. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_serv_a3de613216d33ff96e49e13dfdb324c8f}{send\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Slot to send data through the socket. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_serv_aff7427f512405098b707b7cb88b716f6}{Add\+\_\+\+New\+\_\+\+Client\+\_\+\+Connection}} (QTcp\+Socket \texorpdfstring{$\ast$}{*}s)
+\begin{DoxyCompactList}\small\item\em Slot to add a new client connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629}{send\+Data\+To\+Socket}} (const QByte\+Array \&data)
+\begin{DoxyCompactList}\small\item\em Slot to send data to a specific socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QTcp\+Server \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}{server}}
+\begin{DoxyCompactList}\small\item\em TCP server instance. \end{DoxyCompactList}\item 
+QLine\+Edit \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcp_serv_ad3d911964657dd7e08fc2f6899424523}{x\+Edit}}
+\begin{DoxyCompactList}\small\item\em Line edit for X coordinate input. \end{DoxyCompactList}\item 
+QLine\+Edit \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcp_serv_a48e3913ffef76721009ad919b58ce5bc}{y\+Edit}}
+\begin{DoxyCompactList}\small\item\em Line edit for Y coordinate input. \end{DoxyCompactList}\item 
+QPush\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tcp_serv_a08490af3499b5d019ec347b509be34c4}{send\+Button}}
+\begin{DoxyCompactList}\small\item\em Button to send data. \end{DoxyCompactList}\item 
+QVector$<$ QTcp\+Socket \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_tcp_serv_a0154e5b90fece396385817bee19f12ad}{Client\+\_\+\+Connection\+\_\+\+List}}
+\begin{DoxyCompactList}\small\item\em List of client connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8hh_source_l00024}{24}} of file \mbox{\hyperlink{tcpserv_8hh_source}{tcpserv.\+hh}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_tcp_serv_a39262c57201db3d33fd8b83d13d93f60}\index{TcpServ@{TcpServ}!TcpServ@{TcpServ}}
+\index{TcpServ@{TcpServ}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{TcpServ()}{TcpServ()}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a39262c57201db3d33fd8b83d13d93f60} 
+Tcp\+Serv\+::\+Tcp\+Serv (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Pointer to parent widget, default is nullptr \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{tcpserv_8cpp_source}{tcpserv.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{tcpserv_8cpp_source_l00074}{new\+Connection()}}, and \mbox{\hyperlink{tcpserv_8hh_source_l00091}{server}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_a39262c57201db3d33fd8b83d13d93f60_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_tcp_serv_aff7427f512405098b707b7cb88b716f6}\index{TcpServ@{TcpServ}!Add\_New\_Client\_Connection@{Add\_New\_Client\_Connection}}
+\index{Add\_New\_Client\_Connection@{Add\_New\_Client\_Connection}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{Add\_New\_Client\_Connection}{Add\_New\_Client\_Connection}}
+{\footnotesize\ttfamily \label{class_tcp_serv_aff7427f512405098b707b7cb88b716f6} 
+void Tcp\+Serv\+::\+Add\+\_\+\+New\+\_\+\+Client\+\_\+\+Connection (\begin{DoxyParamCaption}\item[{QTcp\+Socket \texorpdfstring{$\ast$}{*}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Pointer to the new QTcp\+Socket \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8cpp_source_l00080}{80}} of file \mbox{\hyperlink{tcpserv_8cpp_source}{tcpserv.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{tcpserv_8hh_source_l00095}{Client\+\_\+\+Connection\+\_\+\+List}}, and \mbox{\hyperlink{tcpserv_8cpp_source_l00032}{Read\+\_\+\+Data\+\_\+\+From\+\_\+\+Socket()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_aff7427f512405098b707b7cb88b716f6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_aff7427f512405098b707b7cb88b716f6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tcp_serv_ab25bc90e02938a748426da4439d3a084}\index{TcpServ@{TcpServ}!newConnection@{newConnection}}
+\index{newConnection@{newConnection}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{newConnection}{newConnection}}
+{\footnotesize\ttfamily \label{class_tcp_serv_ab25bc90e02938a748426da4439d3a084} 
+void Tcp\+Serv\+::new\+Connection (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{tcpserv_8cpp_source}{tcpserv.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{tcpserv_8cpp_source_l00080}{Add\+\_\+\+New\+\_\+\+Client\+\_\+\+Connection()}}, and \mbox{\hyperlink{tcpserv_8hh_source_l00091}{server}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_ab25bc90e02938a748426da4439d3a084_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_tcp_serv_ab25bc90e02938a748426da4439d3a084_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tcp_serv_abddf59a0ce63d1ca5476a9286463d510}\index{TcpServ@{TcpServ}!Read\_Data\_From\_Socket@{Read\_Data\_From\_Socket}}
+\index{Read\_Data\_From\_Socket@{Read\_Data\_From\_Socket}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{Read\_Data\_From\_Socket}{Read\_Data\_From\_Socket}}
+{\footnotesize\ttfamily \label{class_tcp_serv_abddf59a0ce63d1ca5476a9286463d510} 
+void Tcp\+Serv\+::\+Read\+\_\+\+Data\+\_\+\+From\+\_\+\+Socket (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{tcpserv_8cpp_source}{tcpserv.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00294}{value\+Angle\+Changed()}}, \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00259}{value\+Sharp\+Changed()}}, \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00266}{value\+Tof1\+Changed()}}, \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00273}{value\+Tof2\+Changed()}}, \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00280}{value\+XChanged()}}, and \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00287}{value\+YChanged()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_abddf59a0ce63d1ca5476a9286463d510_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_abddf59a0ce63d1ca5476a9286463d510_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tcp_serv_a3de613216d33ff96e49e13dfdb324c8f}\index{TcpServ@{TcpServ}!sendData@{sendData}}
+\index{sendData@{sendData}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{sendData}{sendData}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a3de613216d33ff96e49e13dfdb324c8f} 
+void Tcp\+Serv\+::send\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8cpp_source_l00102}{102}} of file \mbox{\hyperlink{tcpserv_8cpp_source}{tcpserv.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{tcpserv_8cpp_source_l00093}{send\+Data\+To\+Socket()}}, \mbox{\hyperlink{tcpserv_8hh_source_l00092}{x\+Edit}}, and \mbox{\hyperlink{tcpserv_8hh_source_l00093}{y\+Edit}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_a3de613216d33ff96e49e13dfdb324c8f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629}\index{TcpServ@{TcpServ}!sendDataToSocket@{sendDataToSocket}}
+\index{sendDataToSocket@{sendDataToSocket}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{sendDataToSocket}{sendDataToSocket}}
+{\footnotesize\ttfamily \label{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629} 
+void Tcp\+Serv\+::send\+Data\+To\+Socket (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to send \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8cpp_source_l00093}{93}} of file \mbox{\hyperlink{tcpserv_8cpp_source}{tcpserv.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{tcpserv_8hh_source_l00095}{Client\+\_\+\+Connection\+\_\+\+List}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tcp_serv_a752846b741cf491778b3e72e0c92b8b3}\index{TcpServ@{TcpServ}!valueAngleChanged@{valueAngleChanged}}
+\index{valueAngleChanged@{valueAngleChanged}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{valueAngleChanged}{valueAngleChanged}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a752846b741cf491778b3e72e0c92b8b3} 
+void Tcp\+Serv\+::value\+Angle\+Changed (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New angle -\/ float \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00294}{294}} of file \mbox{\hyperlink{moc__tcpserv_8cpp_source}{moc\+\_\+tcpserv.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_a752846b741cf491778b3e72e0c92b8b3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tcp_serv_a57f34f9900ec0f0e7797d65d5358034c}\index{TcpServ@{TcpServ}!valueSharpChanged@{valueSharpChanged}}
+\index{valueSharpChanged@{valueSharpChanged}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{valueSharpChanged}{valueSharpChanged}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a57f34f9900ec0f0e7797d65d5358034c} 
+void Tcp\+Serv\+::value\+Sharp\+Changed (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New distance reading -\/ int \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00259}{259}} of file \mbox{\hyperlink{moc__tcpserv_8cpp_source}{moc\+\_\+tcpserv.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_a57f34f9900ec0f0e7797d65d5358034c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tcp_serv_a2dbf7bf5bc03836a4271ccd00231eb25}\index{TcpServ@{TcpServ}!valueTof1Changed@{valueTof1Changed}}
+\index{valueTof1Changed@{valueTof1Changed}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{valueTof1Changed}{valueTof1Changed}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a2dbf7bf5bc03836a4271ccd00231eb25} 
+void Tcp\+Serv\+::value\+Tof1\+Changed (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New distance reading -\/ int \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00266}{266}} of file \mbox{\hyperlink{moc__tcpserv_8cpp_source}{moc\+\_\+tcpserv.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_a2dbf7bf5bc03836a4271ccd00231eb25_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tcp_serv_a6b8cb2ec1dc15dd29a20e38a8e8ad267}\index{TcpServ@{TcpServ}!valueTof2Changed@{valueTof2Changed}}
+\index{valueTof2Changed@{valueTof2Changed}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{valueTof2Changed}{valueTof2Changed}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a6b8cb2ec1dc15dd29a20e38a8e8ad267} 
+void Tcp\+Serv\+::value\+Tof2\+Changed (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New distance reading -\/ int \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00273}{273}} of file \mbox{\hyperlink{moc__tcpserv_8cpp_source}{moc\+\_\+tcpserv.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_a6b8cb2ec1dc15dd29a20e38a8e8ad267_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tcp_serv_a94bebed7bda5e59849abe2c620c569d9}\index{TcpServ@{TcpServ}!valueXChanged@{valueXChanged}}
+\index{valueXChanged@{valueXChanged}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{valueXChanged}{valueXChanged}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a94bebed7bda5e59849abe2c620c569d9} 
+void Tcp\+Serv\+::value\+XChanged (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New X coordinate -\/ float \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00280}{280}} of file \mbox{\hyperlink{moc__tcpserv_8cpp_source}{moc\+\_\+tcpserv.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_a94bebed7bda5e59849abe2c620c569d9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_tcp_serv_a2d04177f1875702f7dfd1477dee5812b}\index{TcpServ@{TcpServ}!valueYChanged@{valueYChanged}}
+\index{valueYChanged@{valueYChanged}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{valueYChanged}{valueYChanged}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a2d04177f1875702f7dfd1477dee5812b} 
+void Tcp\+Serv\+::value\+YChanged (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & New Y coordinate -\/ float \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{moc__tcpserv_8cpp_source_l00287}{287}} of file \mbox{\hyperlink{moc__tcpserv_8cpp_source}{moc\+\_\+tcpserv.\+cpp}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tcp_serv_a2d04177f1875702f7dfd1477dee5812b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_tcp_serv_a0154e5b90fece396385817bee19f12ad}\index{TcpServ@{TcpServ}!Client\_Connection\_List@{Client\_Connection\_List}}
+\index{Client\_Connection\_List@{Client\_Connection\_List}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{Client\_Connection\_List}{Client\_Connection\_List}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a0154e5b90fece396385817bee19f12ad} 
+QVector$<$QTcp\+Socket\texorpdfstring{$\ast$}{*}$>$ Tcp\+Serv\+::\+Client\+\_\+\+Connection\+\_\+\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8hh_source_l00095}{95}} of file \mbox{\hyperlink{tcpserv_8hh_source}{tcpserv.\+hh}}.
+
+\Hypertarget{class_tcp_serv_a08490af3499b5d019ec347b509be34c4}\index{TcpServ@{TcpServ}!sendButton@{sendButton}}
+\index{sendButton@{sendButton}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{sendButton}{sendButton}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a08490af3499b5d019ec347b509be34c4} 
+QPush\+Button\texorpdfstring{$\ast$}{*} Tcp\+Serv\+::send\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8hh_source_l00094}{94}} of file \mbox{\hyperlink{tcpserv_8hh_source}{tcpserv.\+hh}}.
+
+\Hypertarget{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}\index{TcpServ@{TcpServ}!server@{server}}
+\index{server@{server}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{server}{server}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2} 
+QTcp\+Server\texorpdfstring{$\ast$}{*} Tcp\+Serv\+::server\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8hh_source_l00091}{91}} of file \mbox{\hyperlink{tcpserv_8hh_source}{tcpserv.\+hh}}.
+
+\Hypertarget{class_tcp_serv_ad3d911964657dd7e08fc2f6899424523}\index{TcpServ@{TcpServ}!xEdit@{xEdit}}
+\index{xEdit@{xEdit}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{xEdit}{xEdit}}
+{\footnotesize\ttfamily \label{class_tcp_serv_ad3d911964657dd7e08fc2f6899424523} 
+QLine\+Edit\texorpdfstring{$\ast$}{*} Tcp\+Serv\+::x\+Edit\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8hh_source_l00092}{92}} of file \mbox{\hyperlink{tcpserv_8hh_source}{tcpserv.\+hh}}.
+
+\Hypertarget{class_tcp_serv_a48e3913ffef76721009ad919b58ce5bc}\index{TcpServ@{TcpServ}!yEdit@{yEdit}}
+\index{yEdit@{yEdit}!TcpServ@{TcpServ}}
+\doxysubsubsection{\texorpdfstring{yEdit}{yEdit}}
+{\footnotesize\ttfamily \label{class_tcp_serv_a48e3913ffef76721009ad919b58ce5bc} 
+QLine\+Edit\texorpdfstring{$\ast$}{*} Tcp\+Serv\+::y\+Edit\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tcpserv_8hh_source_l00093}{93}} of file \mbox{\hyperlink{tcpserv_8hh_source}{tcpserv.\+hh}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tcpserv_8hh}{tcpserv.\+hh}}\item 
+\mbox{\hyperlink{moc__tcpserv_8cpp}{moc\+\_\+tcpserv.\+cpp}}\item 
+\mbox{\hyperlink{tcpserv_8cpp}{tcpserv.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\doxysection{speedometer.\+cpp}
+\hypertarget{speedometer_8cpp_source}{}\label{speedometer_8cpp_source}\mbox{\hyperlink{speedometer_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{speedometer_8hh}{speedometer.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <QPainter>}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <QPolygon>}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00011}\mbox{\hyperlink{class_speedometer_a6db0cf4fe610a00650bc2e300e03f8d9}{00011}}\ \mbox{\hyperlink{class_speedometer_a6db0cf4fe610a00650bc2e300e03f8d9}{Speedometer::Speedometer}}(QWidget\ *parent)\ :\ QWidget(parent),\ m\_angle(0),\ m\_speed(0)\ \{}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{class_speedometer_a0f4c592399ad08cc9c956bdd041ca1a4}{m\_timer}}\ =\ \textcolor{keyword}{new}\ QTimer(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00013}00013\ \ \ \ \ connect(\mbox{\hyperlink{class_speedometer_a0f4c592399ad08cc9c956bdd041ca1a4}{m\_timer}},\ \&QTimer::timeout,\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_speedometer_acfbdf0dfa04288e252d6d14fbc3dc10b}{Speedometer::updateNeedle}});}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_speedometer_a0f4c592399ad08cc9c956bdd041ca1a4}{m\_timer}}-\/>start(50);\ \textcolor{comment}{//\ Update\ every\ 100\ milliseconds}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ Slider\ setup}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_speedometer_a9197c31e8610804e1b8f46ca1219f613}{m\_speedSlider}}\ =\ \textcolor{keyword}{new}\ QSlider(Qt::Horizontal,\ \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{class_speedometer_a9197c31e8610804e1b8f46ca1219f613}{m\_speedSlider}}-\/>setRange(0,\ 240);\ \textcolor{comment}{//\ Assuming\ max\ speed\ is\ 240\ km/h}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{class_speedometer_a9197c31e8610804e1b8f46ca1219f613}{m\_speedSlider}}-\/>setFixedWidth(300);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{class_speedometer_a9197c31e8610804e1b8f46ca1219f613}{m\_speedSlider}}-\/>setFixedHeight(30);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00021}00021\ \ \ \ \ connect(\mbox{\hyperlink{class_speedometer_a9197c31e8610804e1b8f46ca1219f613}{m\_speedSlider}},\ \&QSlider::valueChanged,\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_speedometer_a6a994fb973fe6a5013d51ed090041a7a}{Speedometer::sliderValueChanged}});}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ Layout\ setup}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00024}00024\ \ \ \ \ QVBoxLayout\ *layout\ =\ \textcolor{keyword}{new}\ QVBoxLayout(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00025}00025\ \ \ \ \ layout-\/>addWidget(\mbox{\hyperlink{class_speedometer_a9197c31e8610804e1b8f46ca1219f613}{m\_speedSlider}});}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00026}00026\ \ \ \ \ layout-\/>addStretch();}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00027}00027\ \ \ \ \ setLayout(layout);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ QLabel\ *Display\ =\ new\ QLabel(this);}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ layout-\/>addWidget(Display);}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00037}\mbox{\hyperlink{class_speedometer_ab779eed61253fcef2c02b986ef3a69a5}{00037}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_speedometer_ab779eed61253fcef2c02b986ef3a69a5}{Speedometer::setSpeed}}(\textcolor{keywordtype}{int}\ speed)\ \{}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{class_speedometer_aa8840e573678c79b40276a3f4c3d6aa0}{m\_speed}}\ =\ speed;}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00039}00039\ \ \ \ \ update();}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00045}\mbox{\hyperlink{class_speedometer_a51d6b4ac7c6980e919f8dc6f96628934}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_speedometer_a51d6b4ac7c6980e919f8dc6f96628934}{Speedometer::paintEvent}}(QPaintEvent\ *)\ \{}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00046}00046\ \ \ \ \ QPainter\ painter(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00047}00047\ \ \ \ \ painter.setRenderHint(QPainter::Antialiasing);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{int}\ side\ =\ qMin(width(),\ height());}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00050}00050\ \ \ \ \ painter.setViewport((width()\ -\/\ side)\ /\ 2,\ (height()\ -\/\ side)\ /\ 2,\ side,\ side);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00051}00051\ \ \ \ \ painter.setWindow(-\/50,\ -\/50,\ 100,\ 100);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{comment}{//\ Draw\ the\ speedometer\ gauge}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00054}00054\ \ \ \ \ QLinearGradient\ gradient(80,\ -\/40,\ 0,\ 40);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00055}00055\ \ \ \ \ gradient.setColorAt(0,\ QColor(170,\ 170,\ 170));\ \textcolor{comment}{//\ Początkowy\ kolor\ gradientu}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00056}00056\ \ \ \ \ gradient.setColorAt(1,\ QColor(100,\ 100,\ 100));\ \textcolor{comment}{//\ Końcowy\ kolor\ gradientu}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00057}00057\ \ \ \ \ painter.setPen(Qt::gray);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00058}00058\ \ \ \ \ painter.setBrush(gradient);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00059}00059\ \ \ \ \ painter.drawEllipse(-\/40,\ -\/40,\ 80,\ 80);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00060}00060\ \ \ \ \ painter.setPen(QPen(QColor(70,\ 70,\ 80),\ 2));}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00061}00061\ \ \ \ \ painter.setBrush(Qt::transparent);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00062}00062\ \ \ \ \ painter.drawEllipse(-\/40,\ -\/40,\ 80,\ 80);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ Draw\ the\ numbers\ background}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00065}00065\ \ \ \ \ QFont\ font2\ =\ painter.font();}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00066}00066\ \ \ \ \ font2.setPointSize(4);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00067}00067\ \ \ \ \ font2.setBold(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00068}00068\ \ \ \ \ painter.setFont(font2);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00069}00069\ \ \ \ \ painter.setPen(Qt::black);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 100;\ i\ +=\ 10)\ \{}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ painter.save();}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ painter.rotate(-\/125\ +\ i\ *\ 2.57);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ painter.translate(0,\ -\/34);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ painter.drawText(-\/4,\ 1,\ QString::number(i));}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ painter.restore();}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ Draw\ the\ numbers\ foreground}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00078}00078\ \ \ \ \ QFont\ font\ =\ painter.font();}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00079}00079\ \ \ \ \ font.setPointSize(4);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00080}00080\ \ \ \ \ font.setBold(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00081}00081\ \ \ \ \ painter.setFont(font);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00082}00082\ \ \ \ \ painter.setPen(QColor(220,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ 100;\ i\ +=\ 10)\ \{}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ painter.save();}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ painter.rotate(-\/125\ +\ i\ *\ 2.57);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ painter.translate(0,\ -\/34);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ painter.drawText(-\/5,\ 0,\ QString::number(i));}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ painter.restore();}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{comment}{//\ Draw\ the\ needle}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00093}00093\ \ \ \ \ painter.save();}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00094}00094\ \ \ \ \ painter.rotate(\mbox{\hyperlink{class_speedometer_a33c15df2ce68ab674431019e6cb89690}{m\_angle}});}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00095}00095\ \ \ \ \ QPolygon\ needle;}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00096}00096\ \ \ \ \ needle\ <<\ QPoint(0,\ -\/32)\ <<\ QPoint(2,\ 0)\ <<\ QPoint(-\/2,\ 0);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00097}00097\ \ \ \ \ painter.setPen(QColor(220,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00098}00098\ \ \ \ \ painter.setBrush(QColor(190,\ 0,\ 0));}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00099}00099\ \ \ \ \ painter.drawConvexPolygon(needle);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00100}00100\ \ \ \ \ painter.restore();}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00101}00101\ \}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00106}\mbox{\hyperlink{class_speedometer_acfbdf0dfa04288e252d6d14fbc3dc10b}{00106}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_speedometer_acfbdf0dfa04288e252d6d14fbc3dc10b}{Speedometer::updateNeedle}}()\ \{}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00107}00107\ \ \ \ \ \mbox{\hyperlink{class_speedometer_a33c15df2ce68ab674431019e6cb89690}{m\_angle}}\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(\mbox{\hyperlink{class_speedometer_aa8840e573678c79b40276a3f4c3d6aa0}{m\_speed}})\ /\ 240\ *\ 260\ -\/\ 130;}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00108}00108\ \ \ \ \ update();}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00109}00109\ \}}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00115}\mbox{\hyperlink{class_speedometer_a6a994fb973fe6a5013d51ed090041a7a}{00115}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_speedometer_a6a994fb973fe6a5013d51ed090041a7a}{Speedometer::sliderValueChanged}}(\textcolor{keywordtype}{int}\ value)\ \{}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00116}00116\ \ \ \ \ \mbox{\hyperlink{class_speedometer_ab779eed61253fcef2c02b986ef3a69a5}{setSpeed}}(value);}
+\DoxyCodeLine{\Hypertarget{speedometer_8cpp_source_l00117}00117\ \}}
+
+\end{DoxyCode}

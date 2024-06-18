@@ -1,0 +1,9 @@
+<map id="ui_gyroscope.h" name="ui_gyroscope.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="173,5,283,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,123,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,35,108,76,106,71,198,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="147,80,309,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,33,231,64,225,64,225,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="332,80,471,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="259,30,358,71,356,76,257,35"/>
+</map>

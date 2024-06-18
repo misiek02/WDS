@@ -1,0 +1,15 @@
+<map id="gyroscope.cpp" name="gyroscope.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="130,5,236,32"/>
+<area shape="rect" id="Node000002" href="$gyroscope_8hh.html" title=" " alt="" coords="69,80,169,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,34,142,70,138,66,170,31"/>
+<area shape="rect" id="Node000004" href="$ui__gyroscope_8h.html" title=" " alt="" coords="231,80,340,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="202,30,256,68,253,73,199,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,78,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,109,68,146,64,142,104,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="102,155,219,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="265,110,196,149,194,144,262,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="244,155,405,181"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="295,106,313,140,308,142,290,108"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="428,155,567,181"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="323,105,447,147,445,152,322,110"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="TcpServ::sendData" name="TcpServ::sendData">
+<area shape="rect" id="Node000001" title="Slot to send data through the socket." alt="" coords="5,5,136,32"/>
+<area shape="rect" id="Node000002" href="$class_tcp_serv.html#aa9fbf1bfc05e761d8cef6c7ca2fbb629" title="Slot to send data to a specific socket." alt="" coords="184,5,369,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,16,168,16,168,21,136,21"/>
+</map>

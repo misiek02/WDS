@@ -1,0 +1,249 @@
+\doxysection{Speedometer Class Reference}
+\hypertarget{class_speedometer}{}\label{class_speedometer}\index{Speedometer@{Speedometer}}
+
+
+Models the concept of a speedometer.  
+
+
+
+
+{\ttfamily \#include $<$speedometer.\+hh$>$}
+
+
+
+Inheritance diagram for Speedometer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{class_speedometer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Speedometer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{class_speedometer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_speedometer_a6db0cf4fe610a00650bc2e300e03f8d9}{Speedometer}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_speedometer_a6db0cf4fe610a00650bc2e300e03f8d9}{Speedometer\+::\+Speedometer} Setup function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_speedometer_ab779eed61253fcef2c02b986ef3a69a5}{set\+Speed}} (int speed)
+\begin{DoxyCompactList}\small\item\em set\+Speed sets the speed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_speedometer_a51d6b4ac7c6980e919f8dc6f96628934}{paint\+Event}} (QPaint\+Event \texorpdfstring{$\ast$}{*}) override
+\begin{DoxyCompactList}\small\item\em paint\+Event allows for the creation of the speedometer clock object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_speedometer_acfbdf0dfa04288e252d6d14fbc3dc10b}{update\+Needle}} ()
+\begin{DoxyCompactList}\small\item\em update\+Needle refreshes the position of the clock\textquotesingle{}s needle \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_speedometer_a6a994fb973fe6a5013d51ed090041a7a}{slider\+Value\+Changed}} (int value)
+\begin{DoxyCompactList}\small\item\em slider\+Value\+Changed handles the slider\textquotesingle{}s value change \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QTimer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_speedometer_a0f4c592399ad08cc9c956bdd041ca1a4}{m\+\_\+timer}}
+\item 
+QSlider \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_speedometer_a9197c31e8610804e1b8f46ca1219f613}{m\+\_\+speed\+Slider}}
+\item 
+int \mbox{\hyperlink{class_speedometer_aa8840e573678c79b40276a3f4c3d6aa0}{m\+\_\+speed}}
+\item 
+double \mbox{\hyperlink{class_speedometer_a33c15df2ce68ab674431019e6cb89690}{m\+\_\+angle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{speedometer_8hh_source_l00020}{20}} of file \mbox{\hyperlink{speedometer_8hh_source}{speedometer.\+hh}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_speedometer_a6db0cf4fe610a00650bc2e300e03f8d9}\index{Speedometer@{Speedometer}!Speedometer@{Speedometer}}
+\index{Speedometer@{Speedometer}!Speedometer@{Speedometer}}
+\doxysubsubsection{\texorpdfstring{Speedometer()}{Speedometer()}}
+{\footnotesize\ttfamily \label{class_speedometer_a6db0cf4fe610a00650bc2e300e03f8d9} 
+Speedometer\+::\+Speedometer (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{speedometer_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{speedometer_8cpp_source}{speedometer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{speedometer_8hh_source_l00049}{m\+\_\+speed\+Slider}}, \mbox{\hyperlink{speedometer_8hh_source_l00048}{m\+\_\+timer}}, \mbox{\hyperlink{speedometer_8cpp_source_l00115}{slider\+Value\+Changed()}}, and \mbox{\hyperlink{speedometer_8cpp_source_l00106}{update\+Needle()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_speedometer_a6db0cf4fe610a00650bc2e300e03f8d9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_speedometer_a51d6b4ac7c6980e919f8dc6f96628934}\index{Speedometer@{Speedometer}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!Speedometer@{Speedometer}}
+\doxysubsubsection{\texorpdfstring{paintEvent()}{paintEvent()}}
+{\footnotesize\ttfamily \label{class_speedometer_a51d6b4ac7c6980e919f8dc6f96628934} 
+void Speedometer\+::paint\+Event (\begin{DoxyParamCaption}\item[{QPaint\+Event \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\doxylink{class_speedometer_a51d6b4ac7c6980e919f8dc6f96628934}{Speedometer\+::paint\+Event}. 
+
+Definition at line \mbox{\hyperlink{speedometer_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{speedometer_8cpp_source}{speedometer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{speedometer_8hh_source_l00051}{m\+\_\+angle}}.
+
+\Hypertarget{class_speedometer_ab779eed61253fcef2c02b986ef3a69a5}\index{Speedometer@{Speedometer}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!Speedometer@{Speedometer}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily \label{class_speedometer_ab779eed61253fcef2c02b986ef3a69a5} 
+void Speedometer\+::set\+Speed (\begin{DoxyParamCaption}\item[{int}]{speed}{}\end{DoxyParamCaption})}
+
+\doxylink{class_speedometer_ab779eed61253fcef2c02b986ef3a69a5}{Speedometer\+::set\+Speed}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & speed parameter\\
+\hline
+{\em speed} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{speedometer_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{speedometer_8cpp_source}{speedometer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{speedometer_8hh_source_l00050}{m\+\_\+speed}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_speedometer_ab779eed61253fcef2c02b986ef3a69a5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_speedometer_a6a994fb973fe6a5013d51ed090041a7a}\index{Speedometer@{Speedometer}!sliderValueChanged@{sliderValueChanged}}
+\index{sliderValueChanged@{sliderValueChanged}!Speedometer@{Speedometer}}
+\doxysubsubsection{\texorpdfstring{sliderValueChanged}{sliderValueChanged}}
+{\footnotesize\ttfamily \label{class_speedometer_a6a994fb973fe6a5013d51ed090041a7a} 
+void Speedometer\+::slider\+Value\+Changed (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\doxylink{class_speedometer_a6a994fb973fe6a5013d51ed090041a7a}{Speedometer\+::slider\+Value\+Changed}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & slider\textquotesingle{}s value\\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{speedometer_8cpp_source_l00115}{115}} of file \mbox{\hyperlink{speedometer_8cpp_source}{speedometer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{speedometer_8cpp_source_l00037}{set\+Speed()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_speedometer_a6a994fb973fe6a5013d51ed090041a7a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_speedometer_a6a994fb973fe6a5013d51ed090041a7a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_speedometer_acfbdf0dfa04288e252d6d14fbc3dc10b}\index{Speedometer@{Speedometer}!updateNeedle@{updateNeedle}}
+\index{updateNeedle@{updateNeedle}!Speedometer@{Speedometer}}
+\doxysubsubsection{\texorpdfstring{updateNeedle}{updateNeedle}}
+{\footnotesize\ttfamily \label{class_speedometer_acfbdf0dfa04288e252d6d14fbc3dc10b} 
+void Speedometer\+::update\+Needle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\doxylink{class_speedometer_acfbdf0dfa04288e252d6d14fbc3dc10b}{Speedometer\+::update\+Needle}. 
+
+Definition at line \mbox{\hyperlink{speedometer_8cpp_source_l00106}{106}} of file \mbox{\hyperlink{speedometer_8cpp_source}{speedometer.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{speedometer_8hh_source_l00051}{m\+\_\+angle}}, and \mbox{\hyperlink{speedometer_8hh_source_l00050}{m\+\_\+speed}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_speedometer_acfbdf0dfa04288e252d6d14fbc3dc10b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_speedometer_a33c15df2ce68ab674431019e6cb89690}\index{Speedometer@{Speedometer}!m\_angle@{m\_angle}}
+\index{m\_angle@{m\_angle}!Speedometer@{Speedometer}}
+\doxysubsubsection{\texorpdfstring{m\_angle}{m\_angle}}
+{\footnotesize\ttfamily \label{class_speedometer_a33c15df2ce68ab674431019e6cb89690} 
+double Speedometer\+::m\+\_\+angle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{speedometer_8hh_source_l00051}{51}} of file \mbox{\hyperlink{speedometer_8hh_source}{speedometer.\+hh}}.
+
+\Hypertarget{class_speedometer_aa8840e573678c79b40276a3f4c3d6aa0}\index{Speedometer@{Speedometer}!m\_speed@{m\_speed}}
+\index{m\_speed@{m\_speed}!Speedometer@{Speedometer}}
+\doxysubsubsection{\texorpdfstring{m\_speed}{m\_speed}}
+{\footnotesize\ttfamily \label{class_speedometer_aa8840e573678c79b40276a3f4c3d6aa0} 
+int Speedometer\+::m\+\_\+speed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{speedometer_8hh_source_l00050}{50}} of file \mbox{\hyperlink{speedometer_8hh_source}{speedometer.\+hh}}.
+
+\Hypertarget{class_speedometer_a9197c31e8610804e1b8f46ca1219f613}\index{Speedometer@{Speedometer}!m\_speedSlider@{m\_speedSlider}}
+\index{m\_speedSlider@{m\_speedSlider}!Speedometer@{Speedometer}}
+\doxysubsubsection{\texorpdfstring{m\_speedSlider}{m\_speedSlider}}
+{\footnotesize\ttfamily \label{class_speedometer_a9197c31e8610804e1b8f46ca1219f613} 
+QSlider\texorpdfstring{$\ast$}{*} Speedometer\+::m\+\_\+speed\+Slider\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{speedometer_8hh_source_l00049}{49}} of file \mbox{\hyperlink{speedometer_8hh_source}{speedometer.\+hh}}.
+
+\Hypertarget{class_speedometer_a0f4c592399ad08cc9c956bdd041ca1a4}\index{Speedometer@{Speedometer}!m\_timer@{m\_timer}}
+\index{m\_timer@{m\_timer}!Speedometer@{Speedometer}}
+\doxysubsubsection{\texorpdfstring{m\_timer}{m\_timer}}
+{\footnotesize\ttfamily \label{class_speedometer_a0f4c592399ad08cc9c956bdd041ca1a4} 
+QTimer\texorpdfstring{$\ast$}{*} Speedometer\+::m\+\_\+timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{speedometer_8hh_source_l00048}{48}} of file \mbox{\hyperlink{speedometer_8hh_source}{speedometer.\+hh}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{speedometer_8hh}{speedometer.\+hh}}\item 
+\mbox{\hyperlink{speedometer_8cpp}{speedometer.\+cpp}}\end{DoxyCompactItemize}

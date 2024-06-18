@@ -52,7 +52,7 @@ void DistanceSensors::setYValue(float value)
 
 void DistanceSensors::setAngleValue(float value)
 {
-    QString mes = QString::number(value, 'f', 2);
+    QString mes = QString::number(value, 'f', 2)+ "m";
     ui->angle_val->display(mes);
 }
 

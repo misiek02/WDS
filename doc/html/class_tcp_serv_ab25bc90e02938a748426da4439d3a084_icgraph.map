@@ -1,0 +1,5 @@
+<map id="TcpServ::newConnection" name="TcpServ::newConnection">
+<area shape="rect" id="Node000001" title="Slot to handle new incoming connections." alt="" coords="175,5,338,32"/>
+<area shape="rect" id="Node000002" href="$class_tcp_serv.html#a39262c57201db3d33fd8b83d13d93f60" title="Constructor for TcpServ class." alt="" coords="5,5,127,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,21,127,21,127,16,159,16"/>
+</map>

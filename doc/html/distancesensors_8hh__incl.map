@@ -1,0 +1,18 @@
+<map id="distancesensors.hh" name="distancesensors.hh">
+<area shape="rect" id="Node000001" title="Definition of the DistanceSensors class." alt="" coords="84,5,218,32"/>
+<area shape="rect" id="Node000002" href="$tcpserv_8hh.html" title="Definition of the TcpServclass." alt="" coords="220,80,300,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,30,230,69,227,74,168,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,78,181"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="144,34,62,144,58,141,139,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="223,110,93,152,92,147,221,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="101,155,190,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="242,109,180,148,177,144,239,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="214,155,307,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="263,107,263,139,258,139,258,107"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="330,155,409,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="281,105,339,144,337,148,278,109"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="433,155,533,181"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="300,105,430,147,429,152,298,110"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="556,155,626,181"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="301,100,541,151,540,157,300,105"/>
+</map>
