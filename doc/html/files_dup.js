@@ -15,6 +15,8 @@ var files_dup =
     [ "mainwindow.hh", "mainwindow_8hh.html", "mainwindow_8hh" ],
     [ "model3d.cpp", "model3d_8cpp.html", null ],
     [ "model3d.hh", "model3d_8hh.html", "model3d_8hh" ],
+    [ "openglwidget.cpp", "openglwidget_8cpp.html", null ],
+    [ "openglwidget.hh", "openglwidget_8hh.html", "openglwidget_8hh" ],
     [ "speedometer.cpp", "speedometer_8cpp.html", null ],
     [ "speedometer.hh", "speedometer_8hh.html", "speedometer_8hh" ],
     [ "tcpserv.cpp", "tcpserv_8cpp.html", null ],

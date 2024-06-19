@@ -1,0 +1,138 @@
+\doxysection{Open\+GLWidget Class Reference}
+\hypertarget{class_open_g_l_widget}{}\label{class_open_g_l_widget}\index{OpenGLWidget@{OpenGLWidget}}
+
+
+{\ttfamily \#include $<$openglwidget.\+hh$>$}
+
+
+
+Inheritance diagram for Open\+GLWidget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{class_open_g_l_widget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Open\+GLWidget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_open_g_l_widget__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_g_l_widget_a110146940a976f19017d2747c93e0390}{Open\+GLWidget}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_open_g_l_widget_a4baa372aec232a8d6c153cdef540dc11}{initialize\+GL}} () override
+\item 
+void \mbox{\hyperlink{class_open_g_l_widget_a5f4d21ea58d18a47e90850ac0fbb50ad}{resize\+GL}} (int w, int h) override
+\item 
+void \mbox{\hyperlink{class_open_g_l_widget_a86df33a6b58b77588ffb1c110fcf2932}{paint\+GL}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QMatrix4x4 \mbox{\hyperlink{class_open_g_l_widget_a6d987b851d7285bab5cead55e0011d0b}{projection}}
+\item 
+QMatrix4x4 \mbox{\hyperlink{class_open_g_l_widget_aa240c852a3c9a538a2a42e0c21d3333a}{view}}
+\item 
+\mbox{\hyperlink{class_model3_d}{Model3D}} \mbox{\hyperlink{class_open_g_l_widget_a8b7db6864541f83642002af9f395ad8a}{model3D}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{openglwidget_8hh_source_l00008}{8}} of file \mbox{\hyperlink{openglwidget_8hh_source}{openglwidget.\+hh}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_open_g_l_widget_a110146940a976f19017d2747c93e0390}\label{class_open_g_l_widget_a110146940a976f19017d2747c93e0390} 
+\index{OpenGLWidget@{OpenGLWidget}!OpenGLWidget@{OpenGLWidget}}
+\index{OpenGLWidget@{OpenGLWidget}!OpenGLWidget@{OpenGLWidget}}
+\doxysubsubsection{\texorpdfstring{OpenGLWidget()}{OpenGLWidget()}}
+{\footnotesize\ttfamily Open\+GLWidget\+::\+Open\+GLWidget (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{openglwidget_8hh_source_l00010}{10}} of file \mbox{\hyperlink{openglwidget_8hh_source}{openglwidget.\+hh}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_open_g_l_widget_a4baa372aec232a8d6c153cdef540dc11}\label{class_open_g_l_widget_a4baa372aec232a8d6c153cdef540dc11} 
+\index{OpenGLWidget@{OpenGLWidget}!initializeGL@{initializeGL}}
+\index{initializeGL@{initializeGL}!OpenGLWidget@{OpenGLWidget}}
+\doxysubsubsection{\texorpdfstring{initializeGL()}{initializeGL()}}
+{\footnotesize\ttfamily void Open\+GLWidget\+::initialize\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{openglwidget_8hh_source_l00013}{13}} of file \mbox{\hyperlink{openglwidget_8hh_source}{openglwidget.\+hh}}.
+
+\Hypertarget{class_open_g_l_widget_a86df33a6b58b77588ffb1c110fcf2932}\label{class_open_g_l_widget_a86df33a6b58b77588ffb1c110fcf2932} 
+\index{OpenGLWidget@{OpenGLWidget}!paintGL@{paintGL}}
+\index{paintGL@{paintGL}!OpenGLWidget@{OpenGLWidget}}
+\doxysubsubsection{\texorpdfstring{paintGL()}{paintGL()}}
+{\footnotesize\ttfamily void Open\+GLWidget\+::paint\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{openglwidget_8hh_source_l00026}{26}} of file \mbox{\hyperlink{openglwidget_8hh_source}{openglwidget.\+hh}}.
+
+\Hypertarget{class_open_g_l_widget_a5f4d21ea58d18a47e90850ac0fbb50ad}\label{class_open_g_l_widget_a5f4d21ea58d18a47e90850ac0fbb50ad} 
+\index{OpenGLWidget@{OpenGLWidget}!resizeGL@{resizeGL}}
+\index{resizeGL@{resizeGL}!OpenGLWidget@{OpenGLWidget}}
+\doxysubsubsection{\texorpdfstring{resizeGL()}{resizeGL()}}
+{\footnotesize\ttfamily void Open\+GLWidget\+::resize\+GL (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{openglwidget_8hh_source_l00020}{20}} of file \mbox{\hyperlink{openglwidget_8hh_source}{openglwidget.\+hh}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_open_g_l_widget_a8b7db6864541f83642002af9f395ad8a}\label{class_open_g_l_widget_a8b7db6864541f83642002af9f395ad8a} 
+\index{OpenGLWidget@{OpenGLWidget}!model3D@{model3D}}
+\index{model3D@{model3D}!OpenGLWidget@{OpenGLWidget}}
+\doxysubsubsection{\texorpdfstring{model3D}{model3D}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_model3_d}{Model3D}} Open\+GLWidget\+::model3D\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{openglwidget_8hh_source_l00036}{36}} of file \mbox{\hyperlink{openglwidget_8hh_source}{openglwidget.\+hh}}.
+
+\Hypertarget{class_open_g_l_widget_a6d987b851d7285bab5cead55e0011d0b}\label{class_open_g_l_widget_a6d987b851d7285bab5cead55e0011d0b} 
+\index{OpenGLWidget@{OpenGLWidget}!projection@{projection}}
+\index{projection@{projection}!OpenGLWidget@{OpenGLWidget}}
+\doxysubsubsection{\texorpdfstring{projection}{projection}}
+{\footnotesize\ttfamily QMatrix4x4 Open\+GLWidget\+::projection\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{openglwidget_8hh_source_l00034}{34}} of file \mbox{\hyperlink{openglwidget_8hh_source}{openglwidget.\+hh}}.
+
+\Hypertarget{class_open_g_l_widget_aa240c852a3c9a538a2a42e0c21d3333a}\label{class_open_g_l_widget_aa240c852a3c9a538a2a42e0c21d3333a} 
+\index{OpenGLWidget@{OpenGLWidget}!view@{view}}
+\index{view@{view}!OpenGLWidget@{OpenGLWidget}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily QMatrix4x4 Open\+GLWidget\+::view\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{openglwidget_8hh_source_l00035}{35}} of file \mbox{\hyperlink{openglwidget_8hh_source}{openglwidget.\+hh}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{openglwidget_8hh}{openglwidget.\+hh}}\end{DoxyCompactItemize}

@@ -58,7 +58,7 @@ Canvas::Canvas(QWidget *parent)
 
     Qt3DRender::QCamera *cameraEntity = view->camera();
     cameraEntity->lens()->setPerspectiveProjection(45.0f, 16.0f / 9.0f, 0.1f, 1000.0f);
-    cameraEntity->setPosition(QVector3D(0, 0, 500.0f));
+    cameraEntity->setPosition(QVector3D(0, 0, 50.0f));
     cameraEntity->setViewCenter(QVector3D(0, 0, 0));
 
     Qt3DExtras::QOrbitCameraController *camController = new Qt3DExtras::QOrbitCameraController(rootEntity);
@@ -99,7 +99,7 @@ Canvas::Canvas(QWidget *parent)
 
     // Add connect/disconnect button and status indicator
     QHBoxLayout *bottomLayout = new QHBoxLayout();
-    QPushButton *button = new QPushButton("Start Server", this);
+    QPushButton *button = new QPushButton(tr("Start Server"), this);
     QLabel *circle = new QLabel(this);
     circle->setFixedSize(20, 20);
     circle->setStyleSheet("background-color: red; border-radius: 10px;");
@@ -113,15 +113,15 @@ Canvas::Canvas(QWidget *parent)
         if (!tcp->isActive()) {
             tcp->activateServer();
 
-            QMessageBox::information(nullptr, "Server Status", "Server Started.");
-            button->setText("Connect");
+            QMessageBox::information(nullptr, tr("Server Status"), tr("Server Started."));
+            button->setText(tr("Connect"));
             circle->setStyleSheet("background-color: green; border-radius: 10px;");
 
         } else {
             tcp->deactivateServer();
 
-            QMessageBox::information(nullptr, "Server Status", "Server Stopped.");
-            button->setText("Disconnect");
+            QMessageBox::information(nullptr, tr("Server Status"), tr("Server Stopped."));
+            button->setText(tr("Disconnect"));
             circle->setStyleSheet("background-color: red; border-radius: 10px;");
         }
     });

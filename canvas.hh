@@ -9,6 +9,7 @@
 #include "model3d.hh"
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include <QTranslator>
 
 
 class Canvas : public QWidget

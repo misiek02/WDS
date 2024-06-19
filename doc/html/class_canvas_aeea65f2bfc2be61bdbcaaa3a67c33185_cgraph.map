@@ -1,0 +1,7 @@
+<map id="Canvas::Canvas" name="Canvas::Canvas">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,119,69"/>
+<area shape="rect" id="Node000002" href="$class_acceleration_chart.html#a6311ba5c6074bf3f06a98e4ea9912419" title=" " alt="" coords="167,5,299,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,44,151,38,152,43,120,49"/>
+<area shape="rect" id="Node000003" href="$class_tcp_serv.html#ae42b0f80e31f5317fd51d6759f335051" title="Checks if server is active." alt="" coords="173,72,293,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="120,63,158,70,157,75,119,68"/>
+</map>

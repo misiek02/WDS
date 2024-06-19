@@ -1,5 +1,5 @@
 <map id="AccelerationChart::getChartView" name="AccelerationChart::getChartView">
-<area shape="rect" id="Node000001" title=" " alt="" coords="231,5,363,48"/>
-<area shape="rect" id="Node000002" href="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="Constructor for MainWindow class." alt="" coords="5,13,183,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,29,183,29,183,24,215,24"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="167,5,299,48"/>
+<area shape="rect" id="Node000002" href="$class_canvas.html#aeea65f2bfc2be61bdbcaaa3a67c33185" title=" " alt="" coords="5,13,119,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,29,119,29,119,24,151,24"/>
 </map>

@@ -1,0 +1,11 @@
+<map id="OpenGLWidget" name="OpenGLWidget">
+<area shape="rect" id="Node000001" title=" " alt="" coords="162,171,273,197"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,126,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,112,197,168,194,172,99,117"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="149,80,286,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,122,220,170,215,170,215,122"/>
+<area shape="rect" id="Node000004" href="$class_model3_d.html" title="The Model3D class represents a 3D model in a Qt3D scene." alt="" coords="309,80,382,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="316,118,237,172,234,168,313,114"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="280,5,411,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="348,48,348,80,343,80,343,48"/>
+</map>

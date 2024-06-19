@@ -21,9 +21,9 @@ TcpServ::TcpServ(QWidget *parent)
 
     if (server->listen(QHostAddress::Any, 8080)) {
         connect(server, &QTcpServer::newConnection, this, &TcpServ::newConnection);
-        QMessageBox::information(this, "Info", "Server started");
+        QMessageBox::information(this, "Info", tr("Server started"));
     } else {
-        QMessageBox::information(this, "Info", "Server start fail");
+        QMessageBox::information(this, "Info", tr("Server start fail"));
     }
 
   //  connect(sendButton, &QPushButton::clicked, this, &TcpServ::sendData);

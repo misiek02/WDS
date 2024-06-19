@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tcpserv_0',['TcpServ',['../class_tcp_serv.html',1,'']]]
+  ['speedometer_0',['Speedometer',['../class_speedometer.html',1,'']]]
 ];

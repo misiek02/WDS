@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['tcpserv_0',['TcpServ',['../class_tcp_serv.html',1,'TcpServ'],['../class_tcp_serv.html#a39262c57201db3d33fd8b83d13d93f60',1,'TcpServ::TcpServ()']]],
-  ['tcpserv_2ecpp_1',['tcpserv.cpp',['../tcpserv_8cpp.html',1,'']]],
-  ['tcpserv_2ehh_2',['tcpserv.hh',['../tcpserv_8hh.html',1,'']]],
-  ['timer_3',['timer',['../class_acceleration_chart.html#ae6ee8b3ae4aa2086c6e8720db401a25f',1,'AccelerationChart']]],
-  ['tof1_5fbar_4',['tof1_bar',['../class_ui___distance_sensors.html#a905a3c7fe198bc6fa1651dbfc51dcd3b',1,'Ui_DistanceSensors']]],
-  ['tof1_5flcd_5',['tof1_lcd',['../class_ui___distance_sensors.html#a8a868a01f082d6088bb22ca1f1024247',1,'Ui_DistanceSensors']]],
-  ['tof2_5fbar_6',['tof2_bar',['../class_ui___distance_sensors.html#af80bfc165671c6865739c858531fb9c5',1,'Ui_DistanceSensors']]],
-  ['tof2_5flcd_7',['tof2_lcd',['../class_ui___distance_sensors.html#ae3855c47c095ce4e913a82239fe46e9f',1,'Ui_DistanceSensors']]]
+  ['ui_0',['Ui',['../namespace_ui.html',1,'']]],
+  ['ui_1',['ui',['../class_distance_sensors.html#a06535b507027869afee504b48eb8b634',1,'DistanceSensors::ui'],['../class_gyroscope.html#a51ee50bc6e5d1386ebe898f217e4da9e',1,'Gyroscope::ui'],['../class_main_window.html#a35466a70ed47252a0191168126a352a5',1,'MainWindow::ui']]],
+  ['updatedata_2',['updateData',['../class_acceleration_chart.html#aafff413e79ccf2d03272dceb0b675ad5',1,'AccelerationChart']]],
+  ['updateneedle_3',['updateNeedle',['../class_speedometer.html#acfbdf0dfa04288e252d6d14fbc3dc10b',1,'Speedometer']]]
 ];

@@ -22,6 +22,13 @@ Collaboration diagram for Acceleration\+Chart\+:\nopagebreak
 \includegraphics[width=173pt]{class_acceleration_chart__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_acceleration_chart_afd8dd67561f53c6e31045cae410bcd82}{set\+XValue}} (float value)
+\begin{DoxyCompactList}\small\item\em Sets the acceleration in X axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_acceleration_chart_a95cdb04711afffab1a1fa268cee55df6}{set\+YValue}} (float value)
+\begin{DoxyCompactList}\small\item\em Sets the acceleration in Y axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,11 +70,11 @@ Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00012}{12}} of
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_acceleration_chart_a34bd6d83b4ef99470042322447143802}\index{AccelerationChart@{AccelerationChart}!AccelerationChart@{AccelerationChart}}
+\Hypertarget{class_acceleration_chart_a34bd6d83b4ef99470042322447143802}\label{class_acceleration_chart_a34bd6d83b4ef99470042322447143802} 
+\index{AccelerationChart@{AccelerationChart}!AccelerationChart@{AccelerationChart}}
 \index{AccelerationChart@{AccelerationChart}!AccelerationChart@{AccelerationChart}}
 \doxysubsubsection{\texorpdfstring{AccelerationChart()}{AccelerationChart()}}
-{\footnotesize\ttfamily \label{class_acceleration_chart_a34bd6d83b4ef99470042322447143802} 
-Acceleration\+Chart\+::\+Acceleration\+Chart (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Acceleration\+Chart\+::\+Acceleration\+Chart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -75,23 +82,75 @@ Definition at line \mbox{\hyperlink{accelerationchart_8cpp_source_l00003}{3}} of
 
 
 
-References \mbox{\hyperlink{accelerationchart_8hh_source_l00026}{axisX}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00027}{axisY}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00023}{chart}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00028}{chart\+View}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00024}{series}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00025}{series2}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00029}{timer}}, and \mbox{\hyperlink{accelerationchart_8cpp_source_l00048}{update\+Data()}}.
+References \mbox{\hyperlink{accelerationchart_8hh_source_l00039}{axisX}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00040}{axisY}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00036}{chart}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00041}{chart\+View}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00037}{series}}, and \mbox{\hyperlink{accelerationchart_8hh_source_l00038}{series2}}.
 
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=315pt]{class_acceleration_chart_a34bd6d83b4ef99470042322447143802_cgraph}
-\end{center}
-\end{figure}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_acceleration_chart_a6311ba5c6074bf3f06a98e4ea9912419}\index{AccelerationChart@{AccelerationChart}!getChartView@{getChartView}}
+\Hypertarget{class_acceleration_chart_a6311ba5c6074bf3f06a98e4ea9912419}\label{class_acceleration_chart_a6311ba5c6074bf3f06a98e4ea9912419} 
+\index{AccelerationChart@{AccelerationChart}!getChartView@{getChartView}}
 \index{getChartView@{getChartView}!AccelerationChart@{AccelerationChart}}
 \doxysubsubsection{\texorpdfstring{getChartView()}{getChartView()}}
-{\footnotesize\ttfamily \label{class_acceleration_chart_a6311ba5c6074bf3f06a98e4ea9912419} 
-QChart\+View \texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::get\+Chart\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily QChart\+View \texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::get\+Chart\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{accelerationchart_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{accelerationchart_8cpp_source}{accelerationchart.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{accelerationchart_8hh_source_l00041}{chart\+View}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_acceleration_chart_a6311ba5c6074bf3f06a98e4ea9912419_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_acceleration_chart_afd8dd67561f53c6e31045cae410bcd82}\label{class_acceleration_chart_afd8dd67561f53c6e31045cae410bcd82} 
+\index{AccelerationChart@{AccelerationChart}!setXValue@{setXValue}}
+\index{setXValue@{setXValue}!AccelerationChart@{AccelerationChart}}
+\doxysubsubsection{\texorpdfstring{setXValue}{setXValue}}
+{\footnotesize\ttfamily void Acceleration\+Chart\+::set\+XValue (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ acceleration in X axis \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{accelerationchart_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{accelerationchart_8cpp_source}{accelerationchart.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{accelerationchart_8hh_source_l00039}{axisX}}, and \mbox{\hyperlink{accelerationchart_8hh_source_l00037}{series}}.
+
+\Hypertarget{class_acceleration_chart_a95cdb04711afffab1a1fa268cee55df6}\label{class_acceleration_chart_a95cdb04711afffab1a1fa268cee55df6} 
+\index{AccelerationChart@{AccelerationChart}!setYValue@{setYValue}}
+\index{setYValue@{setYValue}!AccelerationChart@{AccelerationChart}}
+\doxysubsubsection{\texorpdfstring{setYValue}{setYValue}}
+{\footnotesize\ttfamily void Acceleration\+Chart\+::set\+YValue (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ acceleration in Y axis \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{accelerationchart_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{accelerationchart_8cpp_source}{accelerationchart.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{accelerationchart_8hh_source_l00039}{axisX}}, and \mbox{\hyperlink{accelerationchart_8hh_source_l00038}{series2}}.
+
+\Hypertarget{class_acceleration_chart_aafff413e79ccf2d03272dceb0b675ad5}\label{class_acceleration_chart_aafff413e79ccf2d03272dceb0b675ad5} 
+\index{AccelerationChart@{AccelerationChart}!updateData@{updateData}}
+\index{updateData@{updateData}!AccelerationChart@{AccelerationChart}}
+\doxysubsubsection{\texorpdfstring{updateData}{updateData}}
+{\footnotesize\ttfamily void Acceleration\+Chart\+::update\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
 
 
@@ -99,118 +158,90 @@ Definition at line \mbox{\hyperlink{accelerationchart_8cpp_source_l00044}{44}} o
 
 
 
-References \mbox{\hyperlink{accelerationchart_8hh_source_l00028}{chart\+View}}.
+References \mbox{\hyperlink{accelerationchart_8hh_source_l00039}{axisX}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00037}{series}}, and \mbox{\hyperlink{accelerationchart_8hh_source_l00038}{series2}}.
 
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=348pt]{class_acceleration_chart_a6311ba5c6074bf3f06a98e4ea9912419_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{class_acceleration_chart_aafff413e79ccf2d03272dceb0b675ad5}\index{AccelerationChart@{AccelerationChart}!updateData@{updateData}}
-\index{updateData@{updateData}!AccelerationChart@{AccelerationChart}}
-\doxysubsubsection{\texorpdfstring{updateData}{updateData}}
-{\footnotesize\ttfamily \label{class_acceleration_chart_aafff413e79ccf2d03272dceb0b675ad5} 
-void Acceleration\+Chart\+::update\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
-
-
-
-Definition at line \mbox{\hyperlink{accelerationchart_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{accelerationchart_8cpp_source}{accelerationchart.\+cpp}}.
-
-
-
-References \mbox{\hyperlink{accelerationchart_8hh_source_l00026}{axisX}}, \mbox{\hyperlink{accelerationchart_8hh_source_l00024}{series}}, and \mbox{\hyperlink{accelerationchart_8hh_source_l00025}{series2}}.
-
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=315pt]{class_acceleration_chart_aafff413e79ccf2d03272dceb0b675ad5_icgraph}
-\end{center}
-\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_acceleration_chart_a7b4f0898fd86d785864bbd02ca430a61}\index{AccelerationChart@{AccelerationChart}!axisX@{axisX}}
+\Hypertarget{class_acceleration_chart_a7b4f0898fd86d785864bbd02ca430a61}\label{class_acceleration_chart_a7b4f0898fd86d785864bbd02ca430a61} 
+\index{AccelerationChart@{AccelerationChart}!axisX@{axisX}}
 \index{axisX@{axisX}!AccelerationChart@{AccelerationChart}}
 \doxysubsubsection{\texorpdfstring{axisX}{axisX}}
-{\footnotesize\ttfamily \label{class_acceleration_chart_a7b4f0898fd86d785864bbd02ca430a61} 
-QDate\+Time\+Axis\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::axisX\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily QDate\+Time\+Axis\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::axisX\hspace{0.3cm}{\ttfamily [private]}}
 
+Vertical axis variable 
 
+Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00039}{39}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
 
-Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00026}{26}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
-
-\Hypertarget{class_acceleration_chart_a14839c8813da64790d9349b635538ba0}\index{AccelerationChart@{AccelerationChart}!axisY@{axisY}}
+\Hypertarget{class_acceleration_chart_a14839c8813da64790d9349b635538ba0}\label{class_acceleration_chart_a14839c8813da64790d9349b635538ba0} 
+\index{AccelerationChart@{AccelerationChart}!axisY@{axisY}}
 \index{axisY@{axisY}!AccelerationChart@{AccelerationChart}}
 \doxysubsubsection{\texorpdfstring{axisY}{axisY}}
-{\footnotesize\ttfamily \label{class_acceleration_chart_a14839c8813da64790d9349b635538ba0} 
-QValue\+Axis\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::axisY\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily QValue\+Axis\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::axisY\hspace{0.3cm}{\ttfamily [private]}}
 
+Horisontal axis variable 
 
+Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00040}{40}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
 
-Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00027}{27}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
-
-\Hypertarget{class_acceleration_chart_a2a60af1a31b2a7dd3df163f8d28f7a4f}\index{AccelerationChart@{AccelerationChart}!chart@{chart}}
+\Hypertarget{class_acceleration_chart_a2a60af1a31b2a7dd3df163f8d28f7a4f}\label{class_acceleration_chart_a2a60af1a31b2a7dd3df163f8d28f7a4f} 
+\index{AccelerationChart@{AccelerationChart}!chart@{chart}}
 \index{chart@{chart}!AccelerationChart@{AccelerationChart}}
 \doxysubsubsection{\texorpdfstring{chart}{chart}}
-{\footnotesize\ttfamily \label{class_acceleration_chart_a2a60af1a31b2a7dd3df163f8d28f7a4f} 
-QChart\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::chart\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily QChart\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::chart\hspace{0.3cm}{\ttfamily [private]}}
 
+Chart object variable 
 
+Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00036}{36}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
 
-Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00023}{23}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
-
-\Hypertarget{class_acceleration_chart_aefabaffaac6447905045bafc5f364b3f}\index{AccelerationChart@{AccelerationChart}!chartView@{chartView}}
+\Hypertarget{class_acceleration_chart_aefabaffaac6447905045bafc5f364b3f}\label{class_acceleration_chart_aefabaffaac6447905045bafc5f364b3f} 
+\index{AccelerationChart@{AccelerationChart}!chartView@{chartView}}
 \index{chartView@{chartView}!AccelerationChart@{AccelerationChart}}
 \doxysubsubsection{\texorpdfstring{chartView}{chartView}}
-{\footnotesize\ttfamily \label{class_acceleration_chart_aefabaffaac6447905045bafc5f364b3f} 
-QChart\+View\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::chart\+View\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily QChart\+View\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::chart\+View\hspace{0.3cm}{\ttfamily [private]}}
 
+Chart display variable 
 
+Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00041}{41}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
 
-Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00028}{28}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
-
-\Hypertarget{class_acceleration_chart_a174307e7fe615243ffad6ba810a58884}\index{AccelerationChart@{AccelerationChart}!series@{series}}
+\Hypertarget{class_acceleration_chart_a174307e7fe615243ffad6ba810a58884}\label{class_acceleration_chart_a174307e7fe615243ffad6ba810a58884} 
+\index{AccelerationChart@{AccelerationChart}!series@{series}}
 \index{series@{series}!AccelerationChart@{AccelerationChart}}
 \doxysubsubsection{\texorpdfstring{series}{series}}
-{\footnotesize\ttfamily \label{class_acceleration_chart_a174307e7fe615243ffad6ba810a58884} 
-QLine\+Series\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::series\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily QLine\+Series\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::series\hspace{0.3cm}{\ttfamily [private]}}
 
+First line on graph variable 
 
+Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00037}{37}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
 
-Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00024}{24}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
-
-\Hypertarget{class_acceleration_chart_ae6fe039e4fe241d0e3eef6754f77ef86}\index{AccelerationChart@{AccelerationChart}!series2@{series2}}
+\Hypertarget{class_acceleration_chart_ae6fe039e4fe241d0e3eef6754f77ef86}\label{class_acceleration_chart_ae6fe039e4fe241d0e3eef6754f77ef86} 
+\index{AccelerationChart@{AccelerationChart}!series2@{series2}}
 \index{series2@{series2}!AccelerationChart@{AccelerationChart}}
 \doxysubsubsection{\texorpdfstring{series2}{series2}}
-{\footnotesize\ttfamily \label{class_acceleration_chart_ae6fe039e4fe241d0e3eef6754f77ef86} 
-QLine\+Series\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::series2\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily QLine\+Series\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::series2\hspace{0.3cm}{\ttfamily [private]}}
 
+Second line on graph variable 
 
+Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00038}{38}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
 
-Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00025}{25}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
-
-\Hypertarget{class_acceleration_chart_a88b7b08a94acc7afbd08bd4b7728efff}\index{AccelerationChart@{AccelerationChart}!startTime@{startTime}}
+\Hypertarget{class_acceleration_chart_a88b7b08a94acc7afbd08bd4b7728efff}\label{class_acceleration_chart_a88b7b08a94acc7afbd08bd4b7728efff} 
+\index{AccelerationChart@{AccelerationChart}!startTime@{startTime}}
 \index{startTime@{startTime}!AccelerationChart@{AccelerationChart}}
 \doxysubsubsection{\texorpdfstring{startTime}{startTime}}
-{\footnotesize\ttfamily \label{class_acceleration_chart_a88b7b08a94acc7afbd08bd4b7728efff} 
-QDate\+Time Acceleration\+Chart\+::start\+Time\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily QDate\+Time Acceleration\+Chart\+::start\+Time\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00030}{30}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
+Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00043}{43}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
 
-\Hypertarget{class_acceleration_chart_ae6ee8b3ae4aa2086c6e8720db401a25f}\index{AccelerationChart@{AccelerationChart}!timer@{timer}}
+\Hypertarget{class_acceleration_chart_ae6ee8b3ae4aa2086c6e8720db401a25f}\label{class_acceleration_chart_ae6ee8b3ae4aa2086c6e8720db401a25f} 
+\index{AccelerationChart@{AccelerationChart}!timer@{timer}}
 \index{timer@{timer}!AccelerationChart@{AccelerationChart}}
 \doxysubsubsection{\texorpdfstring{timer}{timer}}
-{\footnotesize\ttfamily \label{class_acceleration_chart_ae6ee8b3ae4aa2086c6e8720db401a25f} 
-QTimer\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::timer\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily QTimer\texorpdfstring{$\ast$}{*} Acceleration\+Chart\+::timer\hspace{0.3cm}{\ttfamily [private]}}
 
+Time variable 
 
-
-Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00029}{29}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
+Definition at line \mbox{\hyperlink{accelerationchart_8hh_source_l00042}{42}} of file \mbox{\hyperlink{accelerationchart_8hh_source}{accelerationchart.\+hh}}.
 
 
 

@@ -2,13 +2,13 @@
 \hypertarget{distancesensors_8cpp_source}{}\label{distancesensors_8cpp_source}\mbox{\hyperlink{distancesensors_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{distancesensors_8hh}{distancesensors.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ui__distancesensors_8h}{ui\_distancesensors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}ui\_distancesensors.h"{}}}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00003}00003\ }
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00004}\mbox{\hyperlink{class_distance_sensors_a83a97ac51adb856d984c2b646a886bbf}{00004}}\ \mbox{\hyperlink{class_distance_sensors_a83a97ac51adb856d984c2b646a886bbf}{DistanceSensors::DistanceSensors}}(QWidget\ *parent)}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00005}00005\ \ \ \ \ :\ QWidget(parent)}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00006}00006\ \ \ \ \ ,\ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{class_distance_sensors}{DistanceSensors}})}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>\mbox{\hyperlink{class_ui___distance_sensors_a37397943cb7b9e7be29c59827329ef1f}{setupUi}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00009}00009\ }
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00010}00010\ }
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00011}00011\ }
@@ -23,40 +23,40 @@
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00020}\mbox{\hyperlink{class_distance_sensors_a6a733ec1efeb404713c216b9e6292abb}{00020}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_distance_sensors_a6a733ec1efeb404713c216b9e6292abb}{DistanceSensors::setSharpValue}}(\textcolor{keywordtype}{int}\ value)}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00021}00021\ \{}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>\mbox{\hyperlink{class_ui___distance_sensors_a6d4cc13d533e129ff6cae18430f58cf0}{sharp\_lcd}}-\/>display(value);}
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>\mbox{\hyperlink{class_ui___distance_sensors_a580b46e1221c8b0e1e7508a202544cd7}{sharp\_bar}}-\/>setValue(value);}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>sharp\_lcd-\/>display(value);}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>sharp\_bar-\/>setValue(value);}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00025}00025\ }
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00026}00026\ }
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00027}00027\ \}}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00028}00028\ }
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00029}\mbox{\hyperlink{class_distance_sensors_adcfe891d117e96f2e28c97c92a6ec9b0}{00029}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_distance_sensors_adcfe891d117e96f2e28c97c92a6ec9b0}{DistanceSensors::setTof1Value}}(\textcolor{keywordtype}{int}\ value)}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00030}00030\ \{}
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>\mbox{\hyperlink{class_ui___distance_sensors_a905a3c7fe198bc6fa1651dbfc51dcd3b}{tof1\_bar}}-\/>setValue(value);}
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>\mbox{\hyperlink{class_ui___distance_sensors_a8a868a01f082d6088bb22ca1f1024247}{tof1\_lcd}}-\/>display(value);}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>tof1\_bar-\/>setValue(value);}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>tof1\_lcd-\/>display(value);}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00033}00033\ \}}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00034}00034\ }
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00035}\mbox{\hyperlink{class_distance_sensors_a8119dc4e30eab0f7b4a8068acb22bbc1}{00035}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_distance_sensors_a8119dc4e30eab0f7b4a8068acb22bbc1}{DistanceSensors::setTof2Value}}(\textcolor{keywordtype}{int}\ value)}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00036}00036\ \{}
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>\mbox{\hyperlink{class_ui___distance_sensors_af80bfc165671c6865739c858531fb9c5}{tof2\_bar}}-\/>setValue(value);}
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>\mbox{\hyperlink{class_ui___distance_sensors_ae3855c47c095ce4e913a82239fe46e9f}{tof2\_lcd}}-\/>display(value);}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>tof2\_bar-\/>setValue(value);}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>tof2\_lcd-\/>display(value);}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00039}00039\ \}}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00040}00040\ }
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00041}\mbox{\hyperlink{class_distance_sensors_a49b51cab19bd9ca838075a10714043a5}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_distance_sensors_a49b51cab19bd9ca838075a10714043a5}{DistanceSensors::setXValue}}(\textcolor{keywordtype}{float}\ value)}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00042}00042\ \{}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00043}00043\ \ \ \ \ QString\ mes\ =\ QString::number(value,\ \textcolor{charliteral}{'f'},\ 2);}
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>\mbox{\hyperlink{class_ui___distance_sensors_a5a9c3c2fc4c0d0a9dd1cbd0e3a4ac0c1}{x\_val}}-\/>display(mes);}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>x\_val-\/>display(mes);}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00045}00045\ \}}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00046}00046\ }
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00047}\mbox{\hyperlink{class_distance_sensors_ac1950976ad898a8f329e120d390cf20b}{00047}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_distance_sensors_ac1950976ad898a8f329e120d390cf20b}{DistanceSensors::setYValue}}(\textcolor{keywordtype}{float}\ value)}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00048}00048\ \{}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00049}00049\ \ \ \ \ QString\ mes\ =\ QString::number(value,\ \textcolor{charliteral}{'f'},\ 2);}
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>\mbox{\hyperlink{class_ui___distance_sensors_a2acc17730fcc3b7e2115bf20b3196a38}{y\_val}}-\/>display(mes);}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>y\_val-\/>display(mes);}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00051}00051\ \}}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00052}00052\ }
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00053}\mbox{\hyperlink{class_distance_sensors_ac5f832b42dcbb45ff593c37a555a17d3}{00053}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_distance_sensors_ac5f832b42dcbb45ff593c37a555a17d3}{DistanceSensors::setAngleValue}}(\textcolor{keywordtype}{float}\ value)}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00054}00054\ \{}
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00055}00055\ \ \ \ \ QString\ mes\ =\ QString::number(value,\ \textcolor{charliteral}{'f'},\ 2);}
-\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>\mbox{\hyperlink{class_ui___distance_sensors_a8cc8a903d7ec62e7bc52fa84a6fdfa68}{angle\_val}}-\/>display(mes);}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00055}00055\ \ \ \ \ QString\ mes\ =\ QString::number(value,\ \textcolor{charliteral}{'f'},\ 2)+\ \textcolor{stringliteral}{"{}m"{}};}
+\DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{class_distance_sensors_a06535b507027869afee504b48eb8b634}{ui}}-\/>angle\_val-\/>display(mes);}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00057}00057\ \}}
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00058}00058\ }
 \DoxyCodeLine{\Hypertarget{distancesensors_8cpp_source_l00059}00059\ \textcolor{comment}{//\ void\ DistanceSensors::sendCoordinates(float\ x,\ float\ y,\ TcpServ\ *t)}}

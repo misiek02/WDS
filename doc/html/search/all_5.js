@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['horizontallayout_0',['horizontalLayout',['../class_ui___distance_sensors.html#a9e16442ad2f2427a84afb1363ff8a728',1,'Ui_DistanceSensors']]]
+  ['initializegl_0',['initializeGL',['../class_open_g_l_widget.html#a4baa372aec232a8d6c153cdef540dc11',1,'OpenGLWidget']]],
+  ['isactive_1',['isActive',['../class_tcp_serv.html#ae42b0f80e31f5317fd51d6759f335051',1,'TcpServ']]]
 ];

@@ -1,0 +1,44 @@
+\doxysection{openglwidget.\+hh}
+\hypertarget{openglwidget_8hh_source}{}\label{openglwidget_8hh_source}\mbox{\hyperlink{openglwidget_8hh}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ OPENGLWIDGET\_H}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00002}00002\ \textcolor{preprocessor}{\#define\ OPENGLWIDGET\_H}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <QOpenGLWidget>}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <QOpenGLFunctions>}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <QOpenGLShaderProgram>}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <QMatrix4x4>}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{model3d_8hh}{model3d.hh}}"{}}\textcolor{stringliteral}{"{}}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00008}\mbox{\hyperlink{class_open_g_l_widget}{00008}}\ \textcolor{stringliteral}{class\ OpenGLWidget\ :\ public\ QOpenGLWidget,\ protected\ QOpenGLFunctions\ \{}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00009}00009\ \textcolor{stringliteral}{public:}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00010}\mbox{\hyperlink{class_open_g_l_widget_a110146940a976f19017d2747c93e0390}{00010}}\ \textcolor{stringliteral}{\ \ \ \ OpenGLWidget(QWidget\ *parent\ =\ nullptr)\ :\ QOpenGLWidget(parent)\ \{\}}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00011}00011\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00012}00012\ \textcolor{stringliteral}{protected:}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00013}\mbox{\hyperlink{class_open_g_l_widget_a4baa372aec232a8d6c153cdef540dc11}{00013}}\ \textcolor{stringliteral}{\ \ \ \ void\ initializeGL()\ override\ \{}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00014}00014\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ initializeOpenGLFunctions();}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00015}00015\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ glClearColor(0.2f,\ 0.2f,\ 0.2f,\ 1.0f);}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00016}00016\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ glEnable(GL\_DEPTH\_TEST);}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00017}00017\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ model3D.initialize();}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00018}00018\ \textcolor{stringliteral}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00019}00019\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00020}\mbox{\hyperlink{class_open_g_l_widget_a5f4d21ea58d18a47e90850ac0fbb50ad}{00020}}\ \textcolor{stringliteral}{\ \ \ \ void\ resizeGL(int\ w,\ int\ h)\ override\ \{}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00021}00021\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ glViewport(0,\ 0,\ w,\ h);}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00022}00022\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ projection.setToIdentity();}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00023}00023\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ projection.perspective(45.0f,\ GLfloat(w)\ /\ h,\ 0.01f,\ 100.0f);}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00024}00024\ \textcolor{stringliteral}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00025}00025\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00026}\mbox{\hyperlink{class_open_g_l_widget_a86df33a6b58b77588ffb1c110fcf2932}{00026}}\ \textcolor{stringliteral}{\ \ \ \ void\ paintGL()\ override\ \{}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00027}00027\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ glClear(GL\_COLOR\_BUFFER\_BIT\ |\ GL\_DEPTH\_BUFFER\_BIT);}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00028}00028\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ view.setToIdentity();}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00029}00029\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ view.translate(0.0f,\ 0.0f,\ -\/5.0f);}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00030}00030\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ model3D.draw(projection\ *\ view);}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00031}00031\ \textcolor{stringliteral}{\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00032}00032\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00033}00033\ \textcolor{stringliteral}{private:}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00034}\mbox{\hyperlink{class_open_g_l_widget_a6d987b851d7285bab5cead55e0011d0b}{00034}}\ \textcolor{stringliteral}{\ \ \ \ QMatrix4x4\ projection;}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00035}\mbox{\hyperlink{class_open_g_l_widget_aa240c852a3c9a538a2a42e0c21d3333a}{00035}}\ \textcolor{stringliteral}{\ \ \ \ QMatrix4x4\ view;}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00036}\mbox{\hyperlink{class_open_g_l_widget_a8b7db6864541f83642002af9f395ad8a}{00036}}\ \textcolor{stringliteral}{\ \ \ \ Model3D\ model3D;}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00037}00037\ \textcolor{stringliteral}{\};}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00038}00038\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{openglwidget_8hh_source_l00039}00039\ \textcolor{stringliteral}{\#endif\ //\ OPENGLWIDGET\_H}}
+
+\end{DoxyCode}

@@ -1,13 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,107,78,133"/>
-<area shape="rect" id="Node000001" href="$class_canvas.html" title=" " alt="" coords="154,5,218,32"/>
-<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="64,93,91,67,124,42,152,27,155,32,127,46,95,71,67,97"/>
-<area shape="rect" id="Node000002" href="$class_distance_sensors.html" title="Models the concept of distance sensors." alt="" coords="126,56,246,83"/>
-<area shape="poly" id="edge5_Node000000_Node000002" title=" " alt="" coords="91,100,145,81,146,86,93,105"/>
-<area shape="rect" id="Node000003" href="$class_gyroscope.html" title=" " alt="" coords="144,107,228,133"/>
-<area shape="poly" id="edge6_Node000000_Node000003" title=" " alt="" coords="93,117,143,117,143,123,93,123"/>
-<area shape="rect" id="Node000004" href="$class_speedometer.html" title="Models the concept of a speedometer." alt="" coords="137,157,235,184"/>
-<area shape="poly" id="edge7_Node000000_Node000004" title=" " alt="" coords="93,135,146,154,145,159,91,140"/>
-<area shape="rect" id="Node000005" href="$class_tcp_serv.html" title="Responsible for creating a server robot connects to." alt="" coords="152,208,220,235"/>
-<area shape="poly" id="edge8_Node000000_Node000005" title=" " alt="" coords="67,143,95,169,127,194,153,207,151,212,124,198,91,173,64,147"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" id="Node000001" href="$class_model3_d.html" title="The Model3D class represents a 3D model in a Qt3D scene." alt="" coords="184,5,256,32"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="151,16,183,16,183,21,151,21"/>
 </map>

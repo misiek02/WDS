@@ -17,31 +17,44 @@
 \DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00025}00025\ \ \ \ \ Q\_OBJECT}
 \DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00026}00026\ }
 \DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00027}00027\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_tcp_serv_a39262c57201db3d33fd8b83d13d93f60}{TcpServ}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_tcp_serv_ae42b0f80e31f5317fd51d6759f335051}{isActive}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00034}00034\ signals:}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a57f34f9900ec0f0e7797d65d5358034c}{valueSharpChanged}}(\textcolor{keywordtype}{int}\ value);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a2dbf7bf5bc03836a4271ccd00231eb25}{valueTof1Changed}}(\textcolor{keywordtype}{int}\ value);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a6b8cb2ec1dc15dd29a20e38a8e8ad267}{valueTof2Changed}}(\textcolor{keywordtype}{int}\ value);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00054}00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a94bebed7bda5e59849abe2c620c569d9}{valueXChanged}}(\textcolor{keywordtype}{float}\ value);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a2d04177f1875702f7dfd1477dee5812b}{valueYChanged}}(\textcolor{keywordtype}{float}\ value);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a752846b741cf491778b3e72e0c92b8b3}{valueAngleChanged}}(\textcolor{keywordtype}{float}\ value);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00065}00065\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00066}00066\ \textcolor{keyword}{private}\ slots:}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_ab25bc90e02938a748426da4439d3a084}{newConnection}}();}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00074}00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_abddf59a0ce63d1ca5476a9286463d510}{Read\_Data\_From\_Socket}}();}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00078}00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a3de613216d33ff96e49e13dfdb324c8f}{sendData}}();}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_aff7427f512405098b707b7cb88b716f6}{Add\_New\_Client\_Connection}}(QTcpSocket\ *s);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00088}00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629}{sendDataToSocket}}(\textcolor{keyword}{const}\ QByteArray\ \&data);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00089}00089\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00090}00090\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00091}\mbox{\hyperlink{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}{00091}}\ \ \ \ \ QTcpServer\ *\mbox{\hyperlink{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}{server}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00092}\mbox{\hyperlink{class_tcp_serv_ad3d911964657dd7e08fc2f6899424523}{00092}}\ \ \ \ \ QLineEdit\ *\mbox{\hyperlink{class_tcp_serv_ad3d911964657dd7e08fc2f6899424523}{xEdit}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00093}\mbox{\hyperlink{class_tcp_serv_a48e3913ffef76721009ad919b58ce5bc}{00093}}\ \ \ \ \ QLineEdit\ *\mbox{\hyperlink{class_tcp_serv_a48e3913ffef76721009ad919b58ce5bc}{yEdit}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00094}\mbox{\hyperlink{class_tcp_serv_a08490af3499b5d019ec347b509be34c4}{00094}}\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_tcp_serv_a08490af3499b5d019ec347b509be34c4}{sendButton}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00095}\mbox{\hyperlink{class_tcp_serv_a0154e5b90fece396385817bee19f12ad}{00095}}\ \ \ \ \ QVector<QTcpSocket*>\ \mbox{\hyperlink{class_tcp_serv_a0154e5b90fece396385817bee19f12ad}{Client\_Connection\_List}};\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00096}00096\ \};}
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00097}00097\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00098}00098\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TCPSERV\_HH}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a6d3f7aac503f16eda9289d70c8a049b1}{activateServer}}();}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a2bd8efa6abbeacf4f15fdd2ff6d3f4af}{deactivateServer}}();}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_tcp_serv_a39262c57201db3d33fd8b83d13d93f60}{TcpServ}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00049}00049\ signals:}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00054}\mbox{\hyperlink{class_tcp_serv_a57f34f9900ec0f0e7797d65d5358034c}{00054}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a57f34f9900ec0f0e7797d65d5358034c}{valueSharpChanged}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00059}\mbox{\hyperlink{class_tcp_serv_a2dbf7bf5bc03836a4271ccd00231eb25}{00059}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a2dbf7bf5bc03836a4271ccd00231eb25}{valueTof1Changed}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00064}\mbox{\hyperlink{class_tcp_serv_a6b8cb2ec1dc15dd29a20e38a8e8ad267}{00064}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a6b8cb2ec1dc15dd29a20e38a8e8ad267}{valueTof2Changed}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00069}\mbox{\hyperlink{class_tcp_serv_a94bebed7bda5e59849abe2c620c569d9}{00069}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a94bebed7bda5e59849abe2c620c569d9}{valueXChanged}}(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00074}\mbox{\hyperlink{class_tcp_serv_a2d04177f1875702f7dfd1477dee5812b}{00074}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a2d04177f1875702f7dfd1477dee5812b}{valueYChanged}}(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00079}\mbox{\hyperlink{class_tcp_serv_a752846b741cf491778b3e72e0c92b8b3}{00079}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a752846b741cf491778b3e72e0c92b8b3}{valueAngleChanged}}(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00085}\mbox{\hyperlink{class_tcp_serv_a0c3649512bd051aea0e49826a7232de6}{00085}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a0c3649512bd051aea0e49826a7232de6}{accelerationXChanged}}(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00091}\mbox{\hyperlink{class_tcp_serv_a3647124b719019616b049d32e86ba796}{00091}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a3647124b719019616b049d32e86ba796}{accelerationYChanged}}(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00097}\mbox{\hyperlink{class_tcp_serv_a77ccb614c8d4d29912509f80b32d0da1}{00097}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a77ccb614c8d4d29912509f80b32d0da1}{valueSpeedChanged}}(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00098}00098\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00102}00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_ab25bc90e02938a748426da4439d3a084}{newConnection}}();}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00106}00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_abddf59a0ce63d1ca5476a9286463d510}{Read\_Data\_From\_Socket}}();}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00110}00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a3de613216d33ff96e49e13dfdb324c8f}{sendData}}();}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00115}00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_aff7427f512405098b707b7cb88b716f6}{Add\_New\_Client\_Connection}}(QTcpSocket\ *s);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00120}00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629}{sendDataToSocket}}(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00123}00123\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00124}\mbox{\hyperlink{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}{00124}}\ \ \ \ \ QTcpServer\ *\mbox{\hyperlink{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}{server}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00125}\mbox{\hyperlink{class_tcp_serv_ad3d911964657dd7e08fc2f6899424523}{00125}}\ \ \ \ \ QLineEdit\ *\mbox{\hyperlink{class_tcp_serv_ad3d911964657dd7e08fc2f6899424523}{xEdit}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00126}\mbox{\hyperlink{class_tcp_serv_a48e3913ffef76721009ad919b58ce5bc}{00126}}\ \ \ \ \ QLineEdit\ *\mbox{\hyperlink{class_tcp_serv_a48e3913ffef76721009ad919b58ce5bc}{yEdit}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00127}\mbox{\hyperlink{class_tcp_serv_a08490af3499b5d019ec347b509be34c4}{00127}}\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{class_tcp_serv_a08490af3499b5d019ec347b509be34c4}{sendButton}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00128}\mbox{\hyperlink{class_tcp_serv_a0154e5b90fece396385817bee19f12ad}{00128}}\ \ \ \ \ QVector<QTcpSocket*>\ \mbox{\hyperlink{class_tcp_serv_a0154e5b90fece396385817bee19f12ad}{Client\_Connection\_List}};\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00129}\mbox{\hyperlink{class_tcp_serv_aa0066dc2c7fcd5078ac91ffa1943a5b5}{00129}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_tcp_serv_aa0066dc2c7fcd5078ac91ffa1943a5b5}{active}};\ \textcolor{comment}{//\ Server\ active\ status}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00130}00130\ \};}
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8hh_source_l00132}00132\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TCPSERV\_HH}}
 
 \end{DoxyCode}

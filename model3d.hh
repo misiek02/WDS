@@ -30,7 +30,7 @@ class Model3D : public Qt3DCore::QEntity
 public:
     /**
      * @brief Constructor for Model3D class
-     * @param parent Pointer to parent entity, default is nullptr
+     * @param parent - pointer to parent entity, default is nullptr
      */
     explicit Model3D(Qt3DCore::QEntity *parent = nullptr);
 };

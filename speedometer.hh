@@ -23,7 +23,7 @@ public:
     explicit Speedometer(QWidget *parent = nullptr);
     /**
      * @brief setSpeed sets the speed
-     * @param speed speed parameter
+     * @param speed - speed parameter
      */
     void setSpeed(int speed);
 
@@ -34,13 +34,13 @@ private slots:
     void updateNeedle();
     /**
      * @brief sliderValueChanged handles the slider's value change
-     * @param value slider's value
+     * @param value - slider's value
      */
     void sliderValueChanged(int value);
 public slots:
     /**
      * @brief Sets the speed
-     * @param value the speed data from signal
+     * @param value - the speed data from signal
      */
     void setSpeedValue(float value);
 

@@ -1,0 +1,5 @@
+<map id="Speedometer::setSpeedValue" name="Speedometer::setSpeedValue">
+<area shape="rect" id="Node000001" title="Sets the speed." alt="" coords="5,5,200,32"/>
+<area shape="rect" id="Node000002" href="$class_speedometer.html#ab779eed61253fcef2c02b986ef3a69a5" title="setSpeed sets the speed" alt="" coords="248,5,409,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,16,232,16,232,21,200,21"/>
+</map>

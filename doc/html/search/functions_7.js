@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['read_5fdata_5ffrom_5fsocket_0',['Read_Data_From_Socket',['../class_tcp_serv.html#abddf59a0ce63d1ca5476a9286463d510',1,'TcpServ']]],
-  ['retranslateui_1',['retranslateUi',['../class_ui___acceleration_chart.html#a786611659c923ca8b814c11648aa20e2',1,'Ui_AccelerationChart::retranslateUi()'],['../class_ui___distance_sensors.html#a02d6eb759b06a07d57c341f4003d7b0d',1,'Ui_DistanceSensors::retranslateUi()'],['../class_ui___gyroscope.html#ab938e243045f95e2ba0109282bf23c06',1,'Ui_Gyroscope::retranslateUi()'],['../class_ui___main_window.html#a097dd160c3534a204904cb374412c618',1,'Ui_MainWindow::retranslateUi()'],['../class_ui___model3_d.html#ade4533c967ddf2dba9507d3081826de8',1,'Ui_Model3D::retranslateUi()']]]
+  ['on_5factionenglish_5ftriggered_0',['on_actionEnglish_triggered',['../class_main_window.html#ae36ab7fab3dc85d49dcec92da04c4f42',1,'MainWindow']]],
+  ['on_5factionpolski_5ftriggered_1',['on_actionPolski_triggered',['../class_main_window.html#a8ef9fea05ad3fea90af04c8961b637e4',1,'MainWindow']]],
+  ['openglwidget_2',['OpenGLWidget',['../class_open_g_l_widget.html#a110146940a976f19017d2747c93e0390',1,'OpenGLWidget']]]
 ];

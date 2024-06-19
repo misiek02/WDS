@@ -42,57 +42,57 @@ public:
     void deactivateServer();
     /**
      * @brief Constructor for TcpServ class
-     * @param parent Pointer to parent widget, default is nullptr
+     * @param parent - pointer to parent widget, default is nullptr
      */
     explicit TcpServ(QWidget *parent = nullptr);
 
 signals:
     /**
      * @brief valueSharpChanged informs about new data arrival
-     * @param value New distance reading - int
+     * @param value - new distance reading - int
      */
     void valueSharpChanged(int value);
     /**
      * @brief valueTof1Changed informs about new data arrival for sensor ToF1
-     * @param value New distance reading - int
+     * @param value - new distance reading - int
      */
     void valueTof1Changed(int value);
     /**
      * @brief valueTof2Changed informs about new data arrival for sensor ToF2
-     * @param value New distance reading - int
+     * @param value - new distance reading - int
      */
     void valueTof2Changed(int value);
     /**
      * @brief valueXChanged informs about new X coordinate data
-     * @param value New X coordinate - float
+     * @param value - pew X coordinate - float
      */
     void valueXChanged(float value);
     /**
      * @brief valueYChanged informs about new Y coordinate data
-     * @param value New Y coordinate - float
+     * @param value - new Y coordinate - float
      */
     void valueYChanged(float value);
     /**
      * @brief valueAngleChanged informs about new angle data
-     * @param value New angle - float
+     * @param value - new angle - float
      */
     void valueAngleChanged(float value);
 
     /**
      * @brief accelerationXChanged informs about new acceleration data in X axis
-     * @param value New y axis acceleration - float
+     * @param value - new y axis acceleration - float
      */
     void accelerationXChanged(float value);
 
     /**
      * @brief accelerationXChanged informs about new acceleration data in X axis
-     * @param value New y axis acceleration - float
+     * @param value - new y axis acceleration - float
      */
     void accelerationYChanged(float value);
 
     /**
      * @brief ValueSpeedChanged informs about new speed data data
-     * @param value New speed data - float
+     * @param value - new speed data - float
      */
     void valueSpeedChanged(float value);
 private slots:
@@ -110,12 +110,12 @@ private slots:
     void sendData();
     /**
      * @brief Slot to add a new client connection
-     * @param s Pointer to the new QTcpSocket
+     * @param s - pointer to the new QTcpSocket
      */
     void Add_New_Client_Connection(QTcpSocket *s);
     /**
      * @brief Slot to send data to a specific socket
-     * @param data Data to send
+     * @param data - data to send
      */
     void sendDataToSocket(const QByteArray &data);
 

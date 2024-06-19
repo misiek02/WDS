@@ -1,0 +1,7 @@
+<map id="MainWindow::retranslateUi" name="MainWindow::retranslateUi">
+<area shape="rect" id="Node000001" title=" " alt="" coords="256,47,432,73"/>
+<area shape="rect" id="Node000002" href="$class_main_window.html#ae36ab7fab3dc85d49dcec92da04c4f42" title="on_actionEnglish_triggered triggered when clicked English" alt="" coords="5,5,208,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,48,208,44,208,38,241,43"/>
+<area shape="rect" id="Node000003" href="$class_main_window.html#a8ef9fea05ad3fea90af04c8961b637e4" title="on_actionPolski_triggered triggered when clicked Polish" alt="" coords="9,72,204,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,77,205,82,204,77,240,72"/>
+</map>

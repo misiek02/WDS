@@ -11,6 +11,7 @@
 #include <QString>
 #include <QMessageBox>
 #include <QDebug>
+#include <QTranslator>
 #include "canvas.hh"
 #include "accelerationchart.hh"
 
@@ -37,7 +38,7 @@ class MainWindow : public QMainWindow
 public:
     /**
      * @brief Constructor for MainWindow class
-     * @param parent Pointer to parent widget, default is nullptr
+     * @param parent - pointer to parent widget, default is nullptr
      */
     explicit MainWindow(QWidget *parent = nullptr);
 
@@ -46,8 +47,22 @@ public:
      */
     ~MainWindow();
 
+private slots:
+    /**
+     * @brief on_actionEnglish_triggered triggered when clicked English
+     */
+    void on_actionEnglish_triggered();
+    /**
+     * @brief on_actionPolski_triggered triggered when clicked Polish
+     */
+    void on_actionPolski_triggered();
+
+    void on_action_triggered();
+
 private:
     Ui::MainWindow *ui;
+    QTranslator translator;
+    void retranslateUi();
 
 };
 

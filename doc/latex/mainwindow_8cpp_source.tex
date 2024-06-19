@@ -2,77 +2,60 @@
 \hypertarget{mainwindow_8cpp_source}{}\label{mainwindow_8cpp_source}\mbox{\hyperlink{mainwindow_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mainwindow_8hh}{mainwindow.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ui__mainwindow_8h}{ui\_mainwindow.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}ui\_mainwindow.h"{}}}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <QHBoxLayout>}}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00005}00005\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00006}\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{00006}}\ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow::MainWindow}}(QWidget\ *parent)}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00007}00007\ \ \ \ \ :\ QMainWindow(parent)}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00008}00008\ \ \ \ \ ,\ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{class_main_window}{MainWindow}})}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00009}00009\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>\mbox{\hyperlink{class_ui___main_window_acf4a0872c4c77d8f43a2ec66ed849b58}{setupUi}}(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00011}00011\ \ \ \ \ this-\/>setMinimumSize(800,\ 600);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00013}00013\ \ \ \ \ QWidget\ *centralWidget\ =\ \textcolor{keyword}{new}\ QWidget(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00014}00014\ \ \ \ \ QHBoxLayout\ *mainLayout\ =\ \textcolor{keyword}{new}\ QHBoxLayout(centralWidget);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{class_canvas}{Canvas}}\ *canvas\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_canvas}{Canvas}}(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00017}00017\ \ \ \ \ canvas-\/>setMinimumSize(800,\ 600);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00019}00019\ \ \ \ \ QWidget\ *rightWidget\ =\ \textcolor{keyword}{new}\ QWidget(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00020}00020\ \ \ \ \ QVBoxLayout\ *rightLayout\ =\ \textcolor{keyword}{new}\ QVBoxLayout(rightWidget);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ Set\ up\ the\ 3D\ view}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00023}00023\ \ \ \ \ Qt3DExtras::Qt3DWindow\ *view\ =\ \textcolor{keyword}{new}\ Qt3DExtras::Qt3DWindow();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00024}00024\ \ \ \ \ QWidget\ *container\ =\ QWidget::createWindowContainer(view);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00025}00025\ \ \ \ \ container-\/>setMinimumSize(400,\ 300);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{canvas_8hh}{canvas.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00007}\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{00007}}\ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow::MainWindow}}(QWidget\ *parent)}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00008}00008\ \ \ \ \ :\ QMainWindow(parent)}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00009}00009\ \ \ \ \ ,\ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{class_main_window}{MainWindow}})}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00012}00012\ \ \ \ \ setMinimumSize(800,\ 775);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00014}00014\ \ \ \ \ QWidget\ *centralWidget\ =\ \textcolor{keyword}{new}\ QWidget(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00015}00015\ \ \ \ \ QHBoxLayout\ *mainLayout\ =\ \textcolor{keyword}{new}\ QHBoxLayout(centralWidget);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_canvas}{Canvas}}\ *canvas\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_canvas}{Canvas}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00018}00018\ \ \ \ \ canvas-\/>setSizePolicy(QSizePolicy::Expanding,\ QSizePolicy::Expanding);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00020}00020\ \ \ \ \ mainLayout-\/>addWidget(canvas);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00021}00021\ \ \ \ \ centralWidget-\/>setLayout(mainLayout);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00023}00023\ \ \ \ \ setCentralWidget(centralWidget);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00025}00025\ }
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00027}00027\ \ \ \ \ Qt3DCore::QEntity\ *rootEntity\ =\ \textcolor{keyword}{new}\ Qt3DCore::QEntity();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ Set\ up\ the\ 3D\ model}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{class_model3_d}{Model3D}}\ *model3D\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_model3_d}{Model3D}}(rootEntity);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00027}\mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{00027}}\ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{MainWindow::\string~MainWindow}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00030}00030\ \}}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//\ Set\ up\ the\ camera}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00033}00033\ \ \ \ \ Qt3DRender::QCamera\ *cameraEntity\ =\ view-\/>camera();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00034}00034\ \ \ \ \ cameraEntity-\/>lens()-\/>setPerspectiveProjection(45.0f,\ 16.0f/9.0f,\ 0.1f,\ 1000.0f);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00035}00035\ \ \ \ \ cameraEntity-\/>setPosition(QVector3D(0,\ 0,\ 500.0f));}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00036}00036\ \ \ \ \ cameraEntity-\/>setViewCenter(QVector3D(0,\ 0,\ 0));}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ Set\ up\ camera\ controls}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00039}00039\ \ \ \ \ Qt3DExtras::QOrbitCameraController\ *camController\ =\ \textcolor{keyword}{new}\ Qt3DExtras::QOrbitCameraController(rootEntity);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00040}00040\ \ \ \ \ camController-\/>setCamera(cameraEntity);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ Set\ up\ light}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00043}00043\ \ \ \ \ Qt3DCore::QEntity\ *lightEntity\ =\ \textcolor{keyword}{new}\ Qt3DCore::QEntity(rootEntity);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00044}00044\ \ \ \ \ Qt3DRender::QPointLight\ *light\ =\ \textcolor{keyword}{new}\ Qt3DRender::QPointLight(lightEntity);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00045}00045\ \ \ \ \ light-\/>setColor(\textcolor{stringliteral}{"{}white"{}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00046}00046\ \ \ \ \ light-\/>setIntensity(1);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00047}00047\ \ \ \ \ lightEntity-\/>addComponent(light);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ Set\ up\ transform\ for\ light\ position}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00050}00050\ \ \ \ \ Qt3DCore::QTransform\ *lightTransform\ =\ \textcolor{keyword}{new}\ Qt3DCore::QTransform();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00051}00051\ \ \ \ \ lightTransform-\/>setTranslation(QVector3D(10.0f,\ 10.0f,\ 10.0f));\ \textcolor{comment}{//\ Set\ light\ position}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00052}00052\ \ \ \ \ lightEntity-\/>addComponent(lightTransform);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00054}00054\ \ \ \ \ view-\/>setRootEntity(rootEntity);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00055}00055\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ Set\ up\ the\ chart}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00057}00057\ \ \ \ \ \mbox{\hyperlink{class_acceleration_chart}{AccelerationChart}}\ *accelerationChart\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_acceleration_chart}{AccelerationChart}}();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00058}00058\ \ \ \ \ QChartView\ *chartView\ =\ accelerationChart-\/>\mbox{\hyperlink{class_acceleration_chart_a6311ba5c6074bf3f06a98e4ea9912419}{getChartView}}();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00059}00059\ \ \ \ \ chartView-\/>setMinimumSize(400,\ 300);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00060}00060\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00061}00061\ \ \ \ \ rightLayout-\/>addWidget(container);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00062}00062\ \ \ \ \ rightLayout-\/>addWidget(chartView);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00063}00063\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00064}00064\ \ \ \ \ mainLayout-\/>addWidget(canvas);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00065}00065\ \ \ \ \ mainLayout-\/>addWidget(rightWidget);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00066}00066\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00067}00067\ \ \ \ \ setCentralWidget(centralWidget);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00068}00068\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00069}00069\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00070}00070\ MainWindow::\string~MainWindow()}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00071}00071\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00032}\mbox{\hyperlink{class_main_window_a2836e718ab96e25231b80d346a7841ad}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a2836e718ab96e25231b80d346a7841ad}{MainWindow::retranslateUi}}()\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>retranslateUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00037}\mbox{\hyperlink{class_main_window_ae36ab7fab3dc85d49dcec92da04c4f42}{00037}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ae36ab7fab3dc85d49dcec92da04c4f42}{MainWindow::on\_actionEnglish\_triggered}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00038}00038\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00039}00039\ \ \ \ \ qApp-\/>removeTranslator(\&\mbox{\hyperlink{class_main_window_a8e829b3590ccdeeada42625415afc6f3}{translator}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{class_main_window_a2836e718ab96e25231b80d346a7841ad}{retranslateUi}}();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00041}00041\ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},tr(\textcolor{stringliteral}{"{}Language"{}}),\ tr(\textcolor{stringliteral}{"{}Language\ changed"{}}),\ QMessageBox::Yes);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00045}\mbox{\hyperlink{class_main_window_a8ef9fea05ad3fea90af04c8961b637e4}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a8ef9fea05ad3fea90af04c8961b637e4}{MainWindow::on\_actionPolski\_triggered}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00046}00046\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a8e829b3590ccdeeada42625415afc6f3}{translator}}.load(\textcolor{stringliteral}{"{}:/i18n/translation\_pl.ts"{}}))\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ qApp-\/>installTranslator(\&\mbox{\hyperlink{class_main_window_a8e829b3590ccdeeada42625415afc6f3}{translator}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a2836e718ab96e25231b80d346a7841ad}{retranslateUi}}();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},tr(\textcolor{stringliteral}{"{}Język"{}}),\ tr(\textcolor{stringliteral}{"{}Zmieniono\ język"{}}),\ QMessageBox::Yes);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},tr(\textcolor{stringliteral}{"{}Język"{}}),\ tr(\textcolor{stringliteral}{"{}Blad"{}}),\ QMessageBox::Yes);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00056}00056\ }
 
 \end{DoxyCode}

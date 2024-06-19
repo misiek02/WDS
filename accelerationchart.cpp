@@ -3,22 +3,22 @@
 AccelerationChart::AccelerationChart() {
     series = new QLineSeries();
     series->setColor(Qt::red);
-    series->setName("Acceleration in X axis");
+    series->setName(tr("Acceleration in X axis"));
 
     series2 = new QLineSeries();
     series2->setColor(Qt::blue);
-    series2->setName("Acceleration in Y axis");
+    series2->setName(tr("Acceleration in Y axis"));
 
     chart = new QChart();
     chart->addSeries(series);
     chart->addSeries(series2);
     chart->legend()->setVisible(true);
     chart->legend()->setAlignment(Qt::AlignBottom);
-    chart->setTitle("Acceleration Data Plot");
+    chart->setTitle(tr("Acceleration Data Plot"));
 
     axisX = new QDateTimeAxis;
     axisX->setFormat("HH:mm:ss.zzz");
-    axisX->setTitleText("Time [s]");
+    axisX->setTitleText(tr("Time [s]"));
     axisX->setRange(QDateTime::currentDateTime().addSecs(-10), QDateTime::currentDateTime());
     chart->addAxis(axisX, Qt::AlignBottom);
     series->attachAxis(axisX);
@@ -26,7 +26,7 @@ AccelerationChart::AccelerationChart() {
 
     axisY = new QValueAxis;
     axisY->setLabelFormat("%.1f");
-    axisY->setTitleText("Acceleration [m/s^2]");
+    axisY->setTitleText(tr("Acceleration [G]"));
     axisY->setRange(-1.0f, 1.0f);
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisY);

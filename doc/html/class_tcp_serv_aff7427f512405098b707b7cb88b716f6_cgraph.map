@@ -1,17 +1,23 @@
 <map id="TcpServ::Add_New_Client_Connection" name="TcpServ::Add_New_Client_Connection">
-<area shape="rect" id="Node000001" title="Slot to add a new client connection." alt="" coords="5,124,176,167"/>
-<area shape="rect" id="Node000002" href="$class_tcp_serv.html#abddf59a0ce63d1ca5476a9286463d510" title="Slot to read data from the socket." alt="" coords="224,124,363,167"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,143,208,143,208,148,176,148"/>
-<area shape="rect" id="Node000003" href="$class_tcp_serv.html#a752846b741cf491778b3e72e0c92b8b3" title="valueAngleChanged informs about new angle data" alt="" coords="412,5,600,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="312,122,354,81,381,60,410,42,423,36,425,40,412,46,384,64,358,85,316,125"/>
-<area shape="rect" id="Node000004" href="$class_tcp_serv.html#a57f34f9900ec0f0e7797d65d5358034c" title="valueSharpChanged informs about new data arrival" alt="" coords="411,56,600,83"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="339,121,410,92,432,85,434,90,412,97,341,126"/>
-<area shape="rect" id="Node000005" href="$class_tcp_serv.html#a2dbf7bf5bc03836a4271ccd00231eb25" title="valueTof1Changed informs about new data arrival for sensor ToF1" alt="" coords="416,107,595,133"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="363,134,400,130,401,135,364,140"/>
-<area shape="rect" id="Node000006" href="$class_tcp_serv.html#a6b8cb2ec1dc15dd29a20e38a8e8ad267" title="valueTof2Changed informs about new data arrival for sensor ToF2" alt="" coords="416,157,595,184"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="364,151,401,156,400,161,363,156"/>
-<area shape="rect" id="Node000007" href="$class_tcp_serv.html#a94bebed7bda5e59849abe2c620c569d9" title="valueXChanged informs about new X coordinate data" alt="" coords="425,208,587,235"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="341,165,412,193,434,201,432,206,410,199,339,170"/>
-<area shape="rect" id="Node000008" href="$class_tcp_serv.html#a2d04177f1875702f7dfd1477dee5812b" title="valueYChanged informs about new Y coordinate data" alt="" coords="424,259,588,285"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="316,165,358,206,384,227,412,244,425,250,423,255,410,249,381,231,354,210,312,169"/>
+<area shape="rect" id="Node000001" title="Slot to add a new client connection." alt="" coords="5,200,176,243"/>
+<area shape="rect" id="Node000002" href="$class_tcp_serv.html#abddf59a0ce63d1ca5476a9286463d510" title="Slot to read data from the socket." alt="" coords="224,200,363,243"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,219,208,219,208,224,176,224"/>
+<area shape="rect" id="Node000003" href="$class_tcp_serv.html#a0c3649512bd051aea0e49826a7232de6" title="accelerationXChanged informs about new acceleration data in X axis" alt="" coords="412,5,615,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,198,316,164,339,121,370,78,409,42,417,37,420,41,413,46,374,82,344,124,320,166,305,201"/>
+<area shape="rect" id="Node000004" href="$class_tcp_serv.html#a3647124b719019616b049d32e86ba796" title="accelerationXChanged informs about new acceleration data in X axis" alt="" coords="411,56,616,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="307,198,348,145,377,116,410,92,421,87,423,91,412,97,381,120,352,148,311,201"/>
+<area shape="rect" id="Node000005" href="$class_tcp_serv.html#a752846b741cf491778b3e72e0c92b8b3" title="valueAngleChanged informs about new angle data" alt="" coords="420,107,608,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="321,197,362,169,410,143,428,136,430,141,412,148,364,174,324,202"/>
+<area shape="rect" id="Node000006" href="$class_tcp_serv.html#a57f34f9900ec0f0e7797d65d5358034c" title="valueSharpChanged informs about new data arrival" alt="" coords="419,157,608,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="363,203,437,186,438,191,364,208"/>
+<area shape="rect" id="Node000007" href="$class_tcp_serv.html#a77ccb614c8d4d29912509f80b32d0da1" title="ValueSpeedChanged informs about new speed data data." alt="" coords="418,208,610,235"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="364,219,402,219,402,224,364,224"/>
+<area shape="rect" id="Node000008" href="$class_tcp_serv.html#a2dbf7bf5bc03836a4271ccd00231eb25" title="valueTof1Changed informs about new data arrival for sensor ToF1" alt="" coords="424,259,603,285"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="364,235,438,252,437,257,363,240"/>
+<area shape="rect" id="Node000009" href="$class_tcp_serv.html#a6b8cb2ec1dc15dd29a20e38a8e8ad267" title="valueTof2Changed informs about new data arrival for sensor ToF2" alt="" coords="424,309,603,336"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="324,241,364,269,412,295,430,302,428,307,410,300,362,274,321,245"/>
+<area shape="rect" id="Node000010" href="$class_tcp_serv.html#a94bebed7bda5e59849abe2c620c569d9" title="valueXChanged informs about new X coordinate data" alt="" coords="433,360,595,387"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="311,242,352,295,381,322,412,346,423,351,421,356,410,350,377,326,348,298,307,245"/>
+<area shape="rect" id="Node000011" href="$class_tcp_serv.html#a2d04177f1875702f7dfd1477dee5812b" title="valueYChanged informs about new Y coordinate data" alt="" coords="432,411,596,437"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="305,242,320,277,344,319,374,361,413,397,420,401,417,406,409,401,370,364,339,321,316,279,300,244"/>
 </map>

@@ -1,9 +1,5 @@
 <map id="MainWindow" name="MainWindow">
-<area shape="rect" id="Node000001" title="The MainWindow class represents the main window of the application." alt="" coords="25,171,120,197"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,111,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,122,73,170,68,171,60,123"/>
-<area shape="rect" id="Node000003" href="$class_ui_1_1_main_window.html" title=" " alt="" coords="135,80,250,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,118,91,172,88,168,162,114"/>
-<area shape="rect" id="Node000004" href="$class_ui___main_window.html" title=" " alt="" coords="136,5,250,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="195,48,195,80,190,80,190,48"/>
+<area shape="rect" id="Node000001" title="The MainWindow class represents the main window of the application." alt="" coords="10,80,106,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,111,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,48,61,80,55,80,55,48"/>
 </map>

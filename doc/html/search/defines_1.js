@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['q_5fconstinit_0',['Q_CONSTINIT',['../moc__accelerationchart_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_accelerationchart.cpp'],['../moc__canvas_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_canvas.cpp'],['../moc__distancesensors_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_distancesensors.cpp'],['../moc__gyroscope_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_gyroscope.cpp'],['../moc__mainwindow_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_mainwindow.cpp'],['../moc__model3d_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_model3d.cpp'],['../moc__speedometer_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_speedometer.cpp'],['../moc__tcpserv_8cpp.html#ad83b2306f94b5b9e5625794fc238c8a0',1,'Q_CONSTINIT:&#160;moc_tcpserv.cpp']]]
+  ['win32_0',['WIN32',['../moc__predefs_8h.html#a6402e8b8594280624585b8fd643bfb65',1,'moc_predefs.h']]],
+  ['win64_1',['WIN64',['../moc__predefs_8h.html#a951ed972d2606d55ee009c69fe06672a',1,'moc_predefs.h']]],
+  ['winnt_2',['WINNT',['../moc__predefs_8h.html#a3e2be49a2ed02cf3eaf2b8ff2ff76afd',1,'moc_predefs.h']]]
 ];

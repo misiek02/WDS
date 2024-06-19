@@ -6,7 +6,7 @@ Model3D::Model3D(Qt3DCore::QEntity *parent)
 {
 
     Qt3DRender::QMesh *mesh = new Qt3DRender::QMesh();
-    mesh->setSource(QUrl(QStringLiteral("file:///C:/Users/ADMIN/Documents/qt_projekts/WSD-main/robot.obj"))); // Adjust the path as needed
+    mesh->setSource(QUrl(QStringLiteral("file:///C:/Users/ADMIN/Downloads/robot v18.obj"))); // Adjust the path as needed
     //C:\Users\ADMIN\Documents\qt_projekts\WSD-main
 
 

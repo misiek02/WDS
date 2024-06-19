@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['paintevent_0',['paintEvent',['../class_speedometer.html#a51d6b4ac7c6980e919f8dc6f96628934',1,'Speedometer']]]
+  ['newconnection_0',['newConnection',['../class_tcp_serv.html#ab25bc90e02938a748426da4439d3a084',1,'TcpServ']]]
 ];

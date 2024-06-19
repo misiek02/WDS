@@ -24,9 +24,9 @@
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00021}00021\ }
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}{server}}-\/>listen(QHostAddress::Any,\ 8080))\ \{}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ connect(\mbox{\hyperlink{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}{server}},\ \&QTcpServer::newConnection,\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_tcp_serv_ab25bc90e02938a748426da4439d3a084}{TcpServ::newConnection}});}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Info"{}},\ \textcolor{stringliteral}{"{}Server\ started"{}});}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Info"{}},\ tr(\textcolor{stringliteral}{"{}Server\ started"{}}));}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00025}00025\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Info"{}},\ \textcolor{stringliteral}{"{}Server\ start\ fail"{}});}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Info"{}},\ tr(\textcolor{stringliteral}{"{}Server\ start\ fail"{}}));}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00027}00027\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00028}00028\ }
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00029}00029\ \ \ \textcolor{comment}{//\ \ connect(sendButton,\ \&QPushButton::clicked,\ this,\ \&TcpServ::sendData);}}
@@ -46,7 +46,7 @@
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00044}00044\ }
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ QStringList\ values\ =\ line.split(\textcolor{stringliteral}{"{}\ "{}});}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.size()\ <\ 8)}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (values.size()\ <\ 9)}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00048}00048\ }
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ QVector<float>\ lineData;}
@@ -60,62 +60,82 @@
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ lineData.append(floatValue);}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00059}00059\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lineData.size()\ ==\ 8)}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lineData.size()\ ==\ 9)}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ dataVector.append(lineData);}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00062}00062\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00063}00063\ }
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{if}\ (!dataVector.isEmpty())\ \{}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a57f34f9900ec0f0e7797d65d5358034c}{valueSharpChanged}}(dataVector[2]);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a2dbf7bf5bc03836a4271ccd00231eb25}{valueTof1Changed}}(dataVector[3]);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a6b8cb2ec1dc15dd29a20e38a8e8ad267}{valueTof2Changed}}(dataVector[4]);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a94bebed7bda5e59849abe2c620c569d9}{valueXChanged}}(dataVector[5]);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a2d04177f1875702f7dfd1477dee5812b}{valueYChanged}}(dataVector[6]);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a752846b741cf491778b3e72e0c92b8b3}{valueAngleChanged}}(dataVector[7]);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00071}00071\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00072}00072\ \}}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00073}00073\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00074}\mbox{\hyperlink{class_tcp_serv_ab25bc90e02938a748426da4439d3a084}{00074}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_ab25bc90e02938a748426da4439d3a084}{TcpServ::newConnection}}()\ \{}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}{server}}-\/>hasPendingConnections())\ \{}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tcp_serv_aff7427f512405098b707b7cb88b716f6}{Add\_New\_Client\_Connection}}(\mbox{\hyperlink{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}{server}}-\/>nextPendingConnection());}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00077}00077\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00078}00078\ \}}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00079}00079\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00080}\mbox{\hyperlink{class_tcp_serv_aff7427f512405098b707b7cb88b716f6}{00080}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_aff7427f512405098b707b7cb88b716f6}{TcpServ::Add\_New\_Client\_Connection}}(QTcpSocket\ *s)\ \{}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordflow}{if}\ (!s)\ \{}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Add\_New\_Client\_Connection:\ Invalid\ socket"{}};}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00084}00084\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00085}00085\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00086}00086\ \ \ \ \ \mbox{\hyperlink{class_tcp_serv_a0154e5b90fece396385817bee19f12ad}{Client\_Connection\_List}}.append(s);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00087}00087\ \ \ \ \ connect(s,\ \&QTcpSocket::readyRead,\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_tcp_serv_abddf59a0ce63d1ca5476a9286463d510}{TcpServ::Read\_Data\_From\_Socket}});}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00088}00088\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00089}00089\ \ \ \ \textcolor{comment}{//\ QString\ Client\ =\ "{}Client\ "{}\ +\ QString::number(s-\/>socketDescriptor())\ +\ "{}\ Connected."{};}}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00090}00090\ \ \ \ \ \textcolor{comment}{//qDebug()\ <<\ Client;}}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00091}00091\ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a0c3649512bd051aea0e49826a7232de6}{accelerationXChanged}}(dataVector[0]);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a3647124b719019616b049d32e86ba796}{accelerationYChanged}}(dataVector[1]);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a57f34f9900ec0f0e7797d65d5358034c}{valueSharpChanged}}(dataVector[2]);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a2dbf7bf5bc03836a4271ccd00231eb25}{valueTof1Changed}}(dataVector[3]);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a6b8cb2ec1dc15dd29a20e38a8e8ad267}{valueTof2Changed}}(dataVector[4]);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a94bebed7bda5e59849abe2c620c569d9}{valueXChanged}}(dataVector[5]);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a2d04177f1875702f7dfd1477dee5812b}{valueYChanged}}(dataVector[6]);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a752846b741cf491778b3e72e0c92b8b3}{valueAngleChanged}}(dataVector[7]);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_tcp_serv_a77ccb614c8d4d29912509f80b32d0da1}{valueSpeedChanged}}(dataVector[8]);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00078}\mbox{\hyperlink{class_tcp_serv_ab25bc90e02938a748426da4439d3a084}{00078}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_ab25bc90e02938a748426da4439d3a084}{TcpServ::newConnection}}()\ \{}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}{server}}-\/>hasPendingConnections())\ \{}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tcp_serv_aff7427f512405098b707b7cb88b716f6}{Add\_New\_Client\_Connection}}(\mbox{\hyperlink{class_tcp_serv_a65cdb675f1af7e5c7600d284c575fef2}{server}}-\/>nextPendingConnection());}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00084}\mbox{\hyperlink{class_tcp_serv_aff7427f512405098b707b7cb88b716f6}{00084}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_aff7427f512405098b707b7cb88b716f6}{TcpServ::Add\_New\_Client\_Connection}}(QTcpSocket\ *s)\ \{}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00085}00085\ \ \ \ \ \textcolor{keywordflow}{if}\ (!s)\ \{}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Add\_New\_Client\_Connection:\ Invalid\ socket"{}};}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00090}00090\ \ \ \ \ \mbox{\hyperlink{class_tcp_serv_a0154e5b90fece396385817bee19f12ad}{Client\_Connection\_List}}.append(s);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00091}00091\ \ \ \ \ connect(s,\ \&QTcpSocket::readyRead,\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_tcp_serv_abddf59a0ce63d1ca5476a9286463d510}{TcpServ::Read\_Data\_From\_Socket}});}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00092}00092\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00093}\mbox{\hyperlink{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629}{00093}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629}{TcpServ::sendDataToSocket}}(\textcolor{keyword}{const}\ QByteArray\ \&data)\ \{}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00094}00094\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{foreach}(QTcpSocket\ *socket,\ \mbox{\hyperlink{class_tcp_serv_a0154e5b90fece396385817bee19f12ad}{Client\_Connection\_List}})\{}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ socket-\/>write(data);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ qDebug()\ <<\ data\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00093}00093\ \ \ \ \textcolor{comment}{//\ QString\ Client\ =\ "{}Client\ "{}\ +\ QString::number(s-\/>socketDescriptor())\ +\ "{}\ Connected."{};}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//qDebug()\ <<\ Client;}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00095}00095\ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00097}\mbox{\hyperlink{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629}{00097}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629}{TcpServ::sendDataToSocket}}(\textcolor{keyword}{const}\ QByteArray\ \&data)\ \{}
 \DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00098}00098\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00099}00099\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00100}00100\ \}}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00101}00101\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00102}\mbox{\hyperlink{class_tcp_serv_a3de613216d33ff96e49e13dfdb324c8f}{00102}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a3de613216d33ff96e49e13dfdb324c8f}{TcpServ::sendData}}()\ \{}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00103}00103\ \ \ \ \ \textcolor{keywordtype}{bool}\ xOk,\ yOk;}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00104}00104\ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ \mbox{\hyperlink{class_tcp_serv_ad3d911964657dd7e08fc2f6899424523}{xEdit}}-\/>text().toFloat(\&xOk);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00105}00105\ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ \mbox{\hyperlink{class_tcp_serv_a48e3913ffef76721009ad919b58ce5bc}{yEdit}}-\/>text().toFloat(\&yOk);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00106}00106\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00107}00107\ \ \ \ \ \textcolor{keywordflow}{if}\ (xOk\ \&\&\ yOk)\ \{}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ QByteArray\ data\ =\ QString(\textcolor{stringliteral}{"{}\%1\ \%2\ \(\backslash\)n"{}}).arg(x).arg(y).toUtf8();}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629}{sendDataToSocket}}(data);}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00110}00110\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Input\ Error"{}},\ \textcolor{stringliteral}{"{}Please\ enter\ valid\ float\ values\ for\ X\ and\ Y."{}});}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00112}00112\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00113}00113\ \}}
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00114}00114\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00115}00115\ }
-\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordflow}{foreach}(QTcpSocket\ *socket,\ \mbox{\hyperlink{class_tcp_serv_a0154e5b90fece396385817bee19f12ad}{Client\_Connection\_List}})\{}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ socket-\/>write(data);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ qDebug()\ <<\ data\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00104}00104\ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00106}\mbox{\hyperlink{class_tcp_serv_a3de613216d33ff96e49e13dfdb324c8f}{00106}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a3de613216d33ff96e49e13dfdb324c8f}{TcpServ::sendData}}()\ \{}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00107}00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ xOk,\ yOk;}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00108}00108\ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ \mbox{\hyperlink{class_tcp_serv_ad3d911964657dd7e08fc2f6899424523}{xEdit}}-\/>text().toFloat(\&xOk);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ \mbox{\hyperlink{class_tcp_serv_a48e3913ffef76721009ad919b58ce5bc}{yEdit}}-\/>text().toFloat(\&yOk);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00111}00111\ \ \ \ \ \textcolor{keywordflow}{if}\ (xOk\ \&\&\ yOk)\ \{}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ QByteArray\ data\ =\ QString(\textcolor{stringliteral}{"{}\%1\ \%2\ \(\backslash\)n"{}}).arg(x).arg(y).toUtf8();}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_tcp_serv_aa9fbf1bfc05e761d8cef6c7ca2fbb629}{sendDataToSocket}}(data);}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00114}00114\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ QMessageBox::warning(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Input\ Error"{}},\ \textcolor{stringliteral}{"{}Please\ enter\ valid\ float\ values\ for\ X\ and\ Y."{}});}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00117}00117\ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00120}\mbox{\hyperlink{class_tcp_serv_ae42b0f80e31f5317fd51d6759f335051}{00120}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_tcp_serv_ae42b0f80e31f5317fd51d6759f335051}{TcpServ::isActive}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00121}00121\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00122}00122\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_tcp_serv_aa0066dc2c7fcd5078ac91ffa1943a5b5}{active}};}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00123}00123\ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00125}\mbox{\hyperlink{class_tcp_serv_a6d3f7aac503f16eda9289d70c8a049b1}{00125}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a6d3f7aac503f16eda9289d70c8a049b1}{TcpServ::activateServer}}()}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00126}00126\ \{}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00127}00127\ \ \ \ \ \mbox{\hyperlink{class_tcp_serv_aa0066dc2c7fcd5078ac91ffa1943a5b5}{active}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00129}00129\ \}}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00132}\mbox{\hyperlink{class_tcp_serv_a2bd8efa6abbeacf4f15fdd2ff6d3f4af}{00132}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tcp_serv_a2bd8efa6abbeacf4f15fdd2ff6d3f4af}{TcpServ::deactivateServer}}()}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00133}00133\ \{}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00134}00134\ \ \ \ \ \mbox{\hyperlink{class_tcp_serv_aa0066dc2c7fcd5078ac91ffa1943a5b5}{active}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{tcpserv_8cpp_source_l00136}00136\ \}}
 
 \end{DoxyCode}

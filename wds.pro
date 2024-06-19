@@ -2,7 +2,7 @@ QT       += core gui network 3dcore 3drender 3dinput 3dlogic 3dextras 3danimatio
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++17
+CONFIG += c++17 lrelease lrelease embed_translations
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -36,6 +36,8 @@ FORMS += \
     mainwindow.ui \
     model3d.ui \
     tcpserv.ui
+
+TRANSLATIONS = languages/translation_pl.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

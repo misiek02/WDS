@@ -74,6 +74,13 @@ void Speedometer::paintEvent(QPaintEvent *) {
     painter.setBrush(QColor(190, 0, 0));
     painter.drawConvexPolygon(needle);
     painter.restore();
+
+    painter.setPen(QColor(220, 0, 0));
+    painter.setBrush(QColor(190, 0, 0));
+    QFont unitFont = painter.font();
+    unitFont.setPointSize(2.8);
+    painter.setFont(unitFont);
+    painter.drawText(QRectF(-10, 15, 20, 10), Qt::AlignCenter, "[mm/s]");
 }
 
 void Speedometer::updateNeedle() {

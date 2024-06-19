@@ -3,6 +3,7 @@ var class_speedometer =
     [ "Speedometer", "class_speedometer.html#a6db0cf4fe610a00650bc2e300e03f8d9", null ],
     [ "paintEvent", "class_speedometer.html#a51d6b4ac7c6980e919f8dc6f96628934", null ],
     [ "setSpeed", "class_speedometer.html#ab779eed61253fcef2c02b986ef3a69a5", null ],
+    [ "setSpeedValue", "class_speedometer.html#a805462a03ebe5fd0e0a5b0aea90baddc", null ],
     [ "sliderValueChanged", "class_speedometer.html#a6a994fb973fe6a5013d51ed090041a7a", null ],
     [ "updateNeedle", "class_speedometer.html#acfbdf0dfa04288e252d6d14fbc3dc10b", null ],
     [ "m_angle", "class_speedometer.html#a33c15df2ce68ab674431019e6cb89690", null ],

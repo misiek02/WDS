@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['ndash_20program_20do_20sterowania_20robotem_20kotem_0',['KOTY &amp;ndash; program do sterowania robotem kotem',['../index.html',1,'']]],
-  ['newconnection_1',['newConnection',['../class_tcp_serv.html#ab25bc90e02938a748426da4439d3a084',1,'TcpServ']]]
+  ['on_5factionenglish_5ftriggered_0',['on_actionEnglish_triggered',['../class_main_window.html#ae36ab7fab3dc85d49dcec92da04c4f42',1,'MainWindow']]],
+  ['on_5factionpolski_5ftriggered_1',['on_actionPolski_triggered',['../class_main_window.html#a8ef9fea05ad3fea90af04c8961b637e4',1,'MainWindow']]],
+  ['openglwidget_2',['OpenGLWidget',['../class_open_g_l_widget.html',1,'OpenGLWidget'],['../class_open_g_l_widget.html#a110146940a976f19017d2747c93e0390',1,'OpenGLWidget::OpenGLWidget()']]],
+  ['openglwidget_2ecpp_3',['openglwidget.cpp',['../openglwidget_8cpp.html',1,'']]],
+  ['openglwidget_2ehh_4',['openglwidget.hh',['../openglwidget_8hh.html',1,'']]]
 ];
